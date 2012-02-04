@@ -1,0 +1,12 @@
+User Registration Certificate System (mids) - new users are required to have a valid "Certificate" to create a new account.
+New Very Slick "RECENT POSTS" thread/comment system:Now when you click on a recent post you are taken to the actual thread and browser moves to the exact comment. The entire thread is shown, so the comment is in center view and context.
+Settings->Session Timeout user setting - allows you to have longer lasting sessions
+Refactored News/Article/Comment/Threads system
+Settings->Hide Emoticons rendering (mids)
+HTTP Headers Cache Disabled (42)
+Misc Code Cleanup like error/status displays on some pages
+DBM Database functions removed
+Buddy System converted to postgres
+Cache system depreciated/removed
+Page Loaded at xx:xx UTC information on pages (mids)
+Some of the things above were related footwork for DB call optimization and other things in progress.
