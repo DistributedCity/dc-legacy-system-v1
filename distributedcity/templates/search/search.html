@@ -1,0 +1,172 @@
+<form action="?action=search&SID={{sid}}" method="post">
+<table width="100%" border="0" cellspacing="0" cellpadding="3">
+      <tr>
+	<td class="newsItemTitle">
+	  Search Users
+	  </td>
+	</tr>
+      <tr>
+	<td class="pagePrompt">
+	  You may search for Distributed City users using the form below, browse users alphabetically, or if you have a fast connection and lots of memory, you may elect to display all of the users at once. Use the menu to the left to choose your method.
+	  <br>
+	  TIP: Full text search of News and Forums is coming soon. If you really want to see this feature write it yourself and submit the module to us, or write us with encouraging words.
+</td>
+	</tr>
+{{section:error_message autohide="yes"}}
+      <tr>
+	<td class="errorCell">
+	  <span class="errorText"><span class="errorLabel">Error:</span> {{error_message}}</span>
+	</td>
+      </tr>
+{{/section:error_message}}
+
+
+
+      <tr>
+	<td class="newsItemFooter">
+	  <table width="100%" border="0" cellspacing="0" cellpadding="3">
+	    <tr>
+	      <td colspan="3" class="formHeader">
+		Enter search terms below. TIP: click 'Search' with empty box for full user list.
+		</td>
+	      </tr>
+	    <tr>
+	      <td align="right class="formRow"">
+		<span class="formFieldLabel">User&nbsp;Name:</span>
+		</td>
+	      <td class="formRow">
+
+<!-- 
+Disabled for now
+		<select name="option_username"> 
+{{section:select_options_username}}
+		  <option name="{{select_value_username}}" {{selected_flag_username}}>{{select_name_username}}</option>
+{{/section:select_options_username}}
+		  </select> 
+-->
+&nbsp;
+		</td>
+	      <td width="100%">*
+		<input type="text" name="username" size="16" value="{{username}}">*
+		</td>
+	      </tr>
+
+<!-- 
+Disabled for now
+	    <tr>
+	      <td align="right class="formRow"">
+		<span class="formFieldLabel">Email&nbsp;Address:</span>
+		</td>
+	      <td class="formRow">
+		<select name="option_email_address"> 
+{{section:select_options_email_address}}
+		  <option name="{{select_value_email_address}}" {{selected_flag_email_address}}>{{select_name_email_address}}</option>
+{{/section:select_options_email_address}}
+		  </select> 
+		</td>
+	      <td>
+		<input type="text" name="email_address" size="32" value="{{email_address}}"> 
+		</td>
+	      </tr>
+	    <tr>
+	      <td align="right class="formRow"">
+		<span class="formFieldLabel">Website:</span>
+		</td>
+	      <td class="formRow">
+		<select name="option_website"> 
+{{section:select_options_website}}
+		  <option name="{{select_value_website}}" {{selected_flag_website}}>{{select_name_website}}</option>
+{{/section:select_options_website}}
+		  </select> 
+		</td>
+	      <td>
+		<input type="text" name="website" size="32" value="{{website}}"> 
+		</td>
+	      </tr>
+	    <tr>
+	      <td align="right class="formRow"">
+		<span class="formFieldLabel">Specialities:</span>
+		</td>
+	      <td class="formRow">
+		<select name="option_specialties"> 
+{{section:select_options_specialties}}
+		  <option name="{{select_value_specialties}}" {{selected_flag_specialties}}>{{select_name_specialties}}</option>
+{{/section:select_options_specialties}}
+		  </select> 
+		</td>
+	      <td>
+		<input type="text" name="specialties" size="32" value="{{specialties}}"> 
+		</td>
+	      </tr>
+	    <tr>
+	      <td align="right class="formRow"">
+		<span class="formFieldLabel">Assciation/Cormpany:</span>
+		</td>
+	      <td class="formRow">
+		<select name="option_association"> 
+{{section:select_options_association}}
+		  <option name="{{select_value_association}}" {{selected_flag_association}}>{{select_name_association}}</option>
+{{/section:select_options_association}}
+		  </select> 
+		</td>
+	      <td>
+		<input type="text" name="association" size="32" value="{{association}}"> 
+		</td>
+	      </tr>
+	    <tr>
+	      <td align="right class="formRow"">
+		<span class="formFieldLabel">DMT/ALTA&nbsp;Claim&nbsp;Number:</span>
+		</td>
+	      <td class="formRow">
+		<select name="option_claim_number"> 
+{{section:select_options_claim_number}}
+		  <option name="{{select_value_claim_number}}" {{selected_flag_claim_number}}>{{select_name_claim_number}}</option>
+{{/section:select_options_claim_number}}
+		  </select> 
+		</td>
+	      <td>
+		<input type="text" name="claim_number" size="32" value="{{claim_number}}"> 
+		</td>
+	      </tr>
+	    <tr>
+	      <td align="right class="formRow"">
+		<span class="formFieldLabel">Quote:</span>
+		</td>
+	      <td class="formRow">
+		<select name="option_quote"> 
+{{section:select_options_quote}}
+		  <option name="{{select_value_quote}}" {{selected_flag_quote}}>{{select_name_quote}}</option>
+{{/section:select_options_quote}}
+		  </select> 
+		</td>
+	      <td>
+		<input type="text" name="quote" size="32" value="{{quote}}"> 
+		</td>
+	      </tr>
+	    <tr>
+	      <td align="right class="formRow"">
+		<span class="formFieldLabel">Comments:</span>
+		</td>
+	      <td class="formRow">
+		<select name="option_comments"> 
+{{section:select_options_comments}}
+		  <option name="{{select_value_comments}}" {{selected_flag_comments}}>{{select_name_comments}}</option>
+{{/section:select_options_comments}}
+		  </select> 
+		</td>
+	      <td>
+		<input type="text" name="comments" size="32" value="{{comments}}"> 
+		</td>
+	      </tr>
+
+-->
+	    <tr>
+	      <td colspan="3" class="buttonRow" align="right">
+		 <input type="submit" name="search" value="Search"> 
+		</td>
+	      </tr>
+	    </table>
+	  </td>
+	</tr>
+      </table>
+</form>

@@ -1,0 +1,89 @@
+<form method="post" action="/user/settings/?mode=profile&SID={{sid}}">
+     <table width="100%" border="0" cellpadding="3" cellspacing="0">
+      <tr>
+	<td colspan="2" class="pageTitle">
+	  Profile Settings 
+	</td>
+      </tr>
+      <tr>
+	<td colspan="2" class="pagePrompt">
+	  Your profile is public information which you may elect to provide to the users of Distributed City. Items left blank will not be displayed. 
+	</td>
+      </tr>
+{{section:status_message autohide="yes"}}
+      <tr>
+	<td class="reportCell" colspan="2">
+	  <span class="reportText">{{status_message}}</span> 
+	</td>
+      </tr>
+{{/section:status_message}}
+{{section:error_message autohide="yes"}} 
+     <tr>
+	<td class="errorCell" colspan="2">
+	  <span class="errorText"><span class="errorLabel">Error:</span> {{error_message}}</span> 
+	</td>
+      </tr>
+{{/section:error_message}}
+    <tr>
+      <td class="formRow" align="right">
+	<span class="formFieldLabel">Email:</span> 
+      </td>
+      <td class="formRow" width="100%">
+	<input type="text" size="42" name="email" value="{{email}}"> 
+      </td>
+    </tr>
+      <tr>
+	<td class="formRow" align="right">
+	  <span class="formFieldLabel">WWW:</span> 
+	</td>
+	<td class="formRow">
+	  <input type="text" size="42" name="www" value="{{www}}"> 
+	</td>
+      </tr>
+      <tr>
+	<td class="formRow" align="right">
+	  <span class="formFieldLabel">Specialties:</span> 
+	</td>
+	<td class="formRow">
+	  <input type="text" size="42" name="specialties" value="{{specialties}}"> 
+	</td>
+      </tr>
+      <tr>
+	<td class="formRow" align="right">
+	  <span class="formFieldLabel">Company/Association:</span> 
+	</td>
+	<td class="formRow">
+	  <input type="text" size="42" name="company_association" value="{{company_association}}"> 
+	</td>
+      </tr>
+      <tr>
+	<td class="formRow" align="right">
+	  <span class="formFieldLabel">DMT/ALTA&nbsp;<em>USD</em> Claim&nbsp;Number:</span> 
+	</td>
+	<td class="formRow">
+	  <input type="text" size="42" name="dmt_usd_claim_number" value="{{dmt_usd_claim_number}}"> 
+	</td>
+      </tr>
+      <tr>
+	<td class="formRow" align="right">
+	  <span class="formFieldLabel">Quote (max 1k):</span> 
+	</td>
+	<td class="formRow">
+	  <input type="text" size="42" name="quote" value="{{quote}}"> 
+	</td>
+      </tr>
+      <tr>
+	<td valign="top" class="formRow" align="right">
+	  <span class="formFieldLabel">Comments (max 10k):</span> 
+	</td>
+	<td class="formRow">
+	  <textarea rows="5" cols="42" name="comments">{{comments}}</textarea>
+	</td>
+      </tr>
+      <tr>
+	<td colspan="2" align="right" class="buttonRow">
+	  <input type="submit" name="save_profile" value="Save Profile"> 
+	</td>
+      </tr>
+    </table>
+</form>

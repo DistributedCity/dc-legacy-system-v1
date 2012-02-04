@@ -1,0 +1,170 @@
+<table width="100%" cellspacing="0" cellpadding="3">
+      <tr>
+	<td class="pageTitle">
+	    Using IIP & IRC
+	  </td>
+      </tr>
+      <tr>
+	<td class="pagePrompt">
+	    This tutorial will get you up to speed on using IIP with the Mozilla IRC client.
+	  </td>
+      </tr>
+      <td>
+	<p>In the previous section <a href="/chat/?action=installation">Installing IIP & IRC</a>, we downloaded and installed IIP and Mozilla, which includes an IRC Client called ChatZilla. We will now use these software packages to access IIP.</p>
+
+	<p>To begin using IIP and IRC, start the IIP proxy by following the directions in the IIP installation. Then start up Mozilla.</p>
+
+	<p>Mozilla, upon loading, will provide you with a browser window and will load the Mozilla homepage. We're not interested in the web browser, but the IRC client, which is accessed by clicking the small 'cZ' icon at the bottom left of the browser window. You may also invoke the IRC client by choosing 'IRC Chat' from the 'Window' menu. Start ChatZilla now.</p>
+
+	<p class="subHeader">The ChatZilla Interface</p>
+
+	<p>If all has gone according to plan, you should now be face-to-face with ChatZilla, Mozilla's cleverly-named IRC Client. ChatZilla's interface is divided into three main areas. The largest is the chat and output window. This is where all the messages from other IRC and IIP users will appear. IRC and IIP servers will also display their messages to you in this area.</p>
+	<p>To the left of the output window is a vertical bar which will display the nicknames of other users (once we connect to a server and join a channel). The bottom-most element is the command and chat entry bar. This is where you type chat messages to other users, and issue commands to the client and IRC servers.</p>
+
+	<p>Between the output window and entry bar is a tab row. Whenever you connect to a server or join a channel, or engage in a private conversation with another IIP user, a tab will appear. You may then use these tabs to navigate between server messages, channel conversations, and private conversations.</p>
+	<p class="subHeader">Connecting to IIP</p>
+	  <p>To open up a connection to an IRC server, we use the '/server/' command. 
+        In this case, we will be connecting to the server proxy now running on 
+        your own machine - the isproxy. Enter '/server localhost:6669' (without 
+        the quotes) into the entry bar at the bottom. Mozilla will tell you it 
+        is attempting to connect to the server. It may pause for around 1/2 a 
+        minute, and then you'll be connected.</p>
+
+	<p>Specify a nickname using the command '/nick <nickname>'. We suggest you use your Distributed City Nym name, but the choice is up to you. You should familiarize yourself with Trent, IIP's resident service bot which manages nicknames and channels. You can use Trent to reserve your IIP nickname, as well as reserve channel names. Instructions on how to work with Trent are reprinted from the IIP manual on this page, below the standard IRC command reference.</p>
+
+	<p class="subHeader">Joining a Channel</p>
+	<p>Now that you've got a nickname, you can join a channel to start chatting. First you should get an idea of the channel options available to you. The '/list' command will give you a list of available channels. This list will appear in the tab marked 'localhost'.</p>
+	<p>Distributed City's channels (except for 'The Lobby' #distributedcity main chat channel) are prefixed with 'dc_', as in #dc_cypherpunk, #dc_technology, #dc_politics', etc.</p>
+	<p>There are channels for each DC category, and several others (such as #dc_dev for Developers). Distributed City is sharing the IIP chat space with many other people, so there are all kinds of channels available to you in addition to the ones which Distributed City has created and reserved.</p>
+
+	<p>To join a channel, type '/join <channel_name>'. For example, if you wish to join the Distributed City technology channel, enter '/join #dc_technology'. Your client will add you to the channel's member list, a new tab will appear in the ChatZilla tab bar, and you will be shown the channel title at the top of the message output window. The channel's participants (if any) will be shown in the vertical bar on the left of the window. Anything you type in the chat entry bar will now be sent to the channel and subsequently displayed to all channel participants. Have fun chatting!</p>
+
+<p>This brief tutorial has barely scratched the surface of IRC. There are many more issues regarding channel operators, private messaging, smileys (emoticons), file transfer, etc. which are beyond the scope of an introductory tutorial. To help you get started using IRC more fluently, study the command reference below.</p>
+
+<p>You should also familiarize yourself with Trent, the IIP service bot. Trent can help you reserve nicknames, channels, set access levels for channels, get info on other nicknames or channels, and more. He's very useful. A summary of commands which Trent understands follows the IRC command reference.</p>
+      <p class="generalSubHeader">IRC Command Reference</p>
+      <p>These are basic commands you will need to learn in order to effectively 
+        use IRC. A full command reference may be viewed <a href="http://www.ircle.com/reference/commands.shtml">here</a>.</p>
+      <table width="90%" border="0" align="center" cellpadding="3">
+        <tr> 
+          <td class="formFieldLabel">/help</td>
+          <td>displays a list of supported IRC commands</td>
+        </tr>
+        <tr> 
+          <td width="30%" class="formFieldLabel">/nick &lt;nickname&gt;</td>
+          <td>specify or change your nickname</td>
+        </tr>
+        <tr> 
+          <td class="formFieldLabel">/join &lt;channel&gt;</td>
+          <td>joins the specified channel. If no &lt;channel&gt; exists, a new 
+            one is created.</td>
+        </tr>
+        <tr> 
+          <td class="formFieldLabel">/msg &lt;nick&gt; [message]</td>
+          <td>sends a private [message] to the specified &lt;nick&gt;</td>
+        </tr>
+        <tr> 
+          <td class="formFieldLabel">/leave &lt;channel&gt;</td>
+          <td>leaves the specified channel</td>
+        </tr>
+        <tr> 
+          <td class="formFieldLabel">/me [action]</td>
+          <td>displays [action] to the current channel</td>
+        </tr>
+        <tr> 
+          <td class="formFieldLabel">/bye [message]</td>
+          <td>displays the [message] and quits IRC</td>
+        </tr>
+        <tr> 
+          <td class="formFieldLabel">/list</td>
+          <td>shows a list of active channels (in Mozilla, this list appears in 
+            the server tab)</td>
+        </tr>
+        <tr> 
+          <td class="formFieldLabel">/away [reason]</td>
+          <td>marks you as being away. If a [reason] is specified, this message 
+            is displayed</td>
+        </tr>
+      </table>
+      
+      <p class="subHeader">Some Smileys and Jargon</p>
+
+		<p><pre>
+		<font COLOR=#5511CC>:)</font> is a smiley face, tilt your head to the left to see it.
+		Likewise, <font COLOR=#5511CC>:(</font> is a frown.
+		<font COLOR=#5511CC>;)</font> is a wink.
+		<font COLOR=#5511CC>:~~(</font>  is crying, while
+		<font COLOR=#5511CC>:P</font> is someone sticking their tongue out.
+		<font COLOR=#5511CC>:P ~~</font> is drooling. 
+		<font COLOR=#5511CC>(:</font> a lefty's smile, etc.
+		There are hundreds of these faces.</pre></p>
+
+		<p>Here are some common acronyms used in IRC:</p>
+
+		<p><pre>
+		brb =  be right back                     bbiaf = be back in a flash
+		bbl =  be back later                     ttfn = ta ta for now
+		np  =  no problem                        imho = in my humble opinion
+		lol =  laughing out loud                 j/k = just kidding
+		re  =  hi again, as in 're hi'           wb = welcome back
+		wtf =  what the f--k                     rtfm = read the f--king manual
+		rotfl = rolling on the floor laughing
+		</pre></p>
+		
+        <p><span class="generalSubHeader">IIP Trent Command Reference</span><br>
+        Trent is the service for IIP that facilitates nickname and channel control. 
+        It is like the chanserv and nickserv that some other IRC networks have. 
+        The main purpose of Trent is to authenticate while keeping your anonymity. 
+        Gimmicks like auto-op and auto-voice lists are not implemented (and not 
+        planned to). The user has some responsibility on security. Don't forget 
+        your password nor pick an easy one. There is no way to change it.</p>
+      <p><span class="generalSubHeader">Addressing Trent</span><br>
+        The correct way to address Trent depends on your IRC client. Trent listens 
+        to the SQUERY command specified in RFC 2812. Not all IRC clients know 
+        that command or use it correctly. Both IRC commands and Trent commands 
+        may be upper- and lowercase, Trent can also be spelled in lowercase.</p>
+        <p>If you are lucky, your IRC client works like this: 
+      <pre>/squery Trent command arguments</pre>
+      <p>Otherwise you could try: 
+      <pre>/squery Trent :command arguments</pre>
+      <p>This should always work: 
+      <pre>/quote squery Trent :command arguments</pre>
+      <p><span class="generalSubHeader">Basic Trent Commands</span></p>
+      <table width="90%" border="0" align="center" cellpadding="3">
+        <tr> 
+          <td class="formFieldLabel">/squery Trent help</td>
+          <td>displays a list of Trent commands</td>
+        </tr>
+        <tr> 
+          <td width="40%" class="formFieldLabel">/squery Trent help &lt;command&gt;</td>
+          <td>displays information about a specific Trent &lt;command&gt;</td>
+        </tr>
+        <tr> 
+          <td class="formFieldLabel">/squery Trent nickreg &lt;password&gt;</td>
+          <td>registers your current nickname, and protects it with the specified 
+            &lt;password&gt; </td>
+        </tr>
+        <tr> 
+          <td class="formFieldLabel">/squery Trent identify &lt;password&gt;</td>
+          <td>identifies you as the registered owner of the current nickname</td>
+        </tr>
+        <tr> 
+          <td class="formFieldLabel">/squery Trent nickstatus <nick></td>
+          <td>obtains registration and authentication status of the specified 
+            nickname. Use this to verify the identity of those with whom you chat.</td>
+        </tr>
+      </table>
+      <p>The name 'Trent' comes from traditional cryptographic literature. In 
+        these texts, the authors customarily use the same set of participants to illustrate 
+        their examples when describing cryptographic protocols. Alice is traditionally 
+        the first participant in the protocol being described, Bob is the second. 
+        Eve is always the sneaky eavesdropper, and Mallory Malicious is always 
+        cast as the active snooper who attempts to discover the secret messages 
+        via cryptographic attacks. Trent is known as the Trusted Arbitrator in 
+        protocols which require such a party.</p>
+      <p>This is exactly what the Trent services does - serves as a trusted third 
+        party which can verify the identities of other parties within the IIP 
+        system.</p>
+      </td>
+    </tr>
+</table>

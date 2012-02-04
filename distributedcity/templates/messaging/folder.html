@@ -1,0 +1,45 @@
+<form action="/messaging/?SID={{sid}}" method="post">
+<table width="100%" border="0" cellspacing="0" cellpadding="3" class="pageTitle">
+        <tr>
+          <td class="pageTitle">{{folder_name}}</td>
+        </tr>
+{{section:status_message autohide="yes"}} 
+       <tr>
+          <td class="reportCell"><span class="reportText">{{status_message}}</span></td>
+        </tr>
+{{/section:status_message}}
+
+{{section:error_message autohide="yes"}}  
+        <tr>
+          <td class="errorCell"><span class="errorText"><span class="errorLabel">Error:</span>&nbsp;{{error_message}}</span>
+	    </td>
+        </tr>
+{{/section:error_message}}
+      </table>
+
+<table width="100%" border="0" cellspacing="0" cellpadding="3">
+        <tr>
+          <td class="colHeaderOff">&nbsp;</td>
+          <td class="colHeaderOff">{{from_to_column_label}}</td>
+          <td class="colHeaderOff">Subject</td>
+          <td class="colHeaderOn" align="right">Date</td>
+        </tr>
+{{section:message_headers}}
+        <tr>
+          <td class="listRow"><img src="{{message_to_from_user_image_src}}" width="12" height="12"></td>
+          <td class="listRow">{{message_to_from_username}}</td>
+          <td class="listRow"><a href="/messaging/?action=read&mid={{message_id}}">{{message_subject}}</a></td>
+          <td class="listRow" align="right"><nobr>{{message_date}}</nobr></td>
+        </tr>
+{{/section:message_headers}}
+
+{{section:message_headers_none}}
+        <tr>
+          <td class="listRow" colspan="4">There are no messages to display.</td>
+        </tr>
+{{/section:message_headers_none}}
+        <tr>
+          <td colspan="4" class="buttonRow" align="right">&nbsp;{{section:empty_deleted_box}}<input type="submit" name="empty_deleted_box" value="Permanently Empty Deleted Box"><br><span class="generalButton">{{/section:empty_deleted_box}}</td>
+        </tr>        
+      </table>
+</form>

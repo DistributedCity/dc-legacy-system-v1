@@ -1,0 +1,77 @@
+{{location_bar}}
+{{section:comment_submit_status autohide="yes"}}
+    <table width="100%" border="0" cellspacing="0" cellpadding="3">
+      <tr>
+	<td class="reportCell">
+	  {{post_status}}
+	</td>
+      </tr>
+    </table>
+{{/section:comment_submit_status}}
+
+    <table width="100%" cellpadding="3" cellspacing="0" border="0">
+      <tr>
+	<td class="topicTitleRow" colspan="3">
+
+	  <table width="100%" border="0" cellspacing="0" cellpadding="3">            
+	    <tr>
+	      <td rowspan="2"><img src="{{user_image_src}}" alt="poster avatar" width="32" height="32"></td>
+	      <td width="100%" class="topicSubjectCell">{{section:subject autohide="yes"}}{{topic_subject}}{{/section:subject}}</td>
+          <td align="right" class="topicBylineCell">
+          <small>
+          {{section:parentLink autohide="yes"}}<a href="{{topic_parent_href}}">Parent</a>{{/section:parentLink}}
+          </small>
+          </td>
+	    </tr>
+	    <tr>
+	      <td class="topicBylineCell" colspan="2"><span class="newsItemSubtitleText">by <a href="/search/?profile={{topic_poster_user_id}}">{{topic_poster_username}}</a> on <nobr>{{topic_date_time}}</nobr></span>
+	      </td>
+	    </tr>
+	    </table>
+
+          </td>
+      </tr>
+      <tr>
+       <td class="topicContentCell" colspan="3">
+	  {{topic_body}}
+       </td>
+      </tr>
+
+      <tr>
+	<td colspan="3" class="topicContentFooter"><span class="postCount">This posting has {{comment_count_text}}</span></td>
+      </tr>
+
+
+      <tr>
+       <td class="topicReplyRow">
+        <FORM method="post" action="?SID={{sid}}">
+	<input type="hidden" name="new_post_parent_id" value="{{topic_id}}">
+	<input type="hidden" name="new_post_regarding" value="{{topic_subject}}">
+	<INPUT TYPE="submit" NAME="reply" VALUE="Reply to this">
+       </td>
+
+
+       <td align="right" class="articleReplyRow">Comment View:
+	 <select name="change_mode">
+         <option value="flat_desc" {{selected_flat_desc}}>Flat - Recent First</option>
+         <option value="flat_asc" {{selected_flat_asc}}>Flat - Oldest First</option>
+         <option value="flat" {{selected_flat}}>Flat - Nested Order</option>
+         <option value="nested" {{selected_nested}}>Nested</option>
+         <option value="none" {{selected_none}}>OFF</option>
+         </select>
+       </td>
+
+       <td align="right" class="articleReplyRow">
+         <input type="submit" name="change" value="Change">
+	 </form>
+       </td>
+      </tr>
+
+
+      <tr>
+	<td colspan="3" class="topicContentCell">&nbsp;
+	</td>
+      </tr>
+   </table>
+{{comment_block}}
+

@@ -1,0 +1,64 @@
+    <table width="100%%" border="0" cellspacing="0" cellpadding="3">
+      <tr>
+	<td colspan="3" class="pageTitle">
+	  Buddy List
+	</td>
+      </tr>
+      <tr>
+	<td colspan="3" class="pagePrompt">
+	  Distributed City Nyms which you add to your Buddy List will appear in your Private Messages box in the right sidebar.
+	</td>
+      </tr>
+{{section:status_message autohide="yes"}}
+      <tr>
+	<td class="reportCell" colspan="3">
+	  <span class="reportText">{{status_message}}</span>
+	</td>
+      </tr>
+{{/section:status_message}}
+{{section:error_message autohide="yes"}}
+      <tr>
+	<td class="errorCell" colspan="3">
+	  <span class="errorText"><span class="errorLabel">Error:</span> {{error_message}}</span>
+	</td>
+      </tr>
+{{/section:error_message}}
+      <tr>
+	<td align="right" class="colHeaderOff">
+	  &nbsp;
+	</td>
+	<td class="colHeaderOff">
+	  Name
+	</td>
+	<td width="100%" class="colHeaderOff">
+	  &nbsp;
+	</td>
+      </tr>
+{{section:buddy_list autohide="yes"}}
+    {{section:buddy_item}}
+    <tr>
+      <td align="right" class="listRow">
+	<img src="{{user_image_src}}" alt="" width="12" height="12" border="0">
+	</td>
+      <td class="listRow">
+	<A HREF="/search/?profile={{buddy_user_id}}">{{buddy_username}}</a>
+	</td>
+      <td width="100%" class="listRow">
+	<span class="generalButton"><a href="/user/settings/?mode=buddy_list&action=remove_buddy&uid={{buddy_user_id}}">Remove</a></span>
+	</td>
+      </tr>
+    {{/section:buddy_item}}
+    {{section:buddy_row_none autohide="yes"}}
+    <tr>
+      <td align="left" class="listRow" colspan="3">
+	There are no Nyms in your Buddy List.
+      </td>
+    </tr>
+    {{/section:buddy_row_none}}
+{{/section:buddy_list}}
+    <tr>
+      <td colspan="3" class="buttonRow" align="right">
+	&nbsp; 
+	</td>
+      </tr>
+</table>

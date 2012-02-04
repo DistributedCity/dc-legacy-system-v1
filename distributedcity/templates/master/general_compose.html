@@ -1,0 +1,314 @@
+{{location_bar}}
+{{section:comment_form}}
+ <!-- BEGIN comment_form SECTION -->
+    <form method="post" action="{{form_action}}" name="post">
+      {{section:hidden_form_vars}}
+      <input type="hidden" name="{{hidden_name}}" value="{{hidden_value}}">
+      {{/section:hidden_form_vars}}
+      <table align="center" border="0" cellpadding="3" cellspacing="0" width="100%">
+
+{{section:forum_topic_prompt}}
+	<tr>
+	  <td colspan="2" class="pageTitle">
+	    Create New Thread
+	  </td>
+	</tr>
+	<tr>
+	  <td class="pagePrompt" colspan="2">
+	    Compose your new thread below. It will be posted in the forum named above, and you may crosspost it to another forum at the same time using the dropdown menu below. <em>TIP:</em> <span class="tipText">HTML tags are not supported. Instead use the [ ] tags (formatting buttons incl. URLs are around the compose area).</span>
+	  </td>
+	</tr>
+{{/section:forum_topic_prompt}}
+
+{{section:forum_comment_prompt}}
+	<tr>
+	  <td colspan="2" class="pageTitle">
+	    Post Thread Reply
+	  </td>
+	</tr>
+
+	<tr>
+	  <td class="pagePrompt" colspan="2">
+	    Compose your reply below. It will be posted in the forum named above. <em>TIP:</em> <span class="tipText">HTML tags are not supported. Instead use the [ ] tags (formatting buttons incl. URLs are around the compose area).</span> 
+	  </td>
+	</tr>
+{{/section:forum_comment_prompt}}
+
+
+{{section:article_comment_prompt}}
+	<tr>
+	  <td colspan="2" class="pageTitle">
+	    Post Article Comment: {{new_post_subject_default}}
+	  </td>
+	</tr>
+
+	<tr>
+	  <td class="pagePrompt" colspan="2">
+	    Compose your article comment below. <em>TIP:</em> <span class="tipText">HTML tags are not supported. Instead use the [ ] tags (formatting buttons incl. URLs are around the compose area).</span>
+	  </td>
+	</tr>
+{{/section:article_comment_prompt}}
+
+
+{{section:message_page_prompt}}
+	<tr>
+	  <td colspan="2" class="pageTitle">
+	    Compose Private Message
+	  </td>
+	</tr>
+
+	<tr>
+	  <td class="pagePrompt" colspan="2">
+	  Enter your message and recipients below. <em>TIP:</em> <span class="tipText">HTML tags are not supported. Instead use the [ ] tags (formatting buttons incl. URLs are around the compose area).</span>
+	  </td>
+	</tr>
+{{/section:message_page_prompt}}
+
+{{section:error autohide="yes"}}
+    <tr>
+      <td class="errorCell" colspan="2"><span class="errorLabel">Error:</span>&nbsp;{{error_message}}
+      </td>
+    </tr>
+{{/section:error}}
+
+{{section:author}}
+	<tr>
+	  <td align="right" class="formRow">
+	    <span class="formFieldLabel">Author:</span> 
+	  </td>
+	  <td align="left" class="formRow">
+	    <span class="formFieldValue">{{current_user}}</span> 
+	  </td>
+	</tr>
+{{/section:author}}
+
+{{section:from}}
+	<tr>
+	  <td align="right" class="formRow">
+	    <span class="formFieldLabel">From:</span> 
+	  </td>
+	  <td align="left" class="formRow">
+	    <span class="formFieldValue">{{username}}</span> 
+	  </td>
+	</tr>
+{{/section:from}}
+
+{{section:to}}
+	    <tr>
+	      <td class="formRow" align="right"><span class="formFieldLabel">To:</span></td>
+	      <td class="formRow">
+		<input type="text" name="new_message_to" size="60" tabindex="1" value="{{new_message_to}}" style="font-family: Verdana, Helvetica, Lucida, Arial, sans-serif; font-size: 12px; color: #033;">
+	      </td>
+	    </tr>
+{{/section:to}}
+
+{{section:title}}
+	<tr>
+	  <td align="right" class="formRow">
+	    <span class="formFieldLabel">Title:</span> 
+	  </td>
+	  <td align="left" class="formRow">
+	   <input type="text" name="subject" size="64" tabindex="2" maxlength="100" value="{{subject_content}}" style="font-family: Verdana, Helvetica, Lucida, Arial, sans-serif; font-size: 12px; color: #033;">
+	  </td>
+	</tr>
+{{/section:title}}
+
+{{section:subject}}
+	    <tr>
+	      <td class="formRow" align="right"><span class="formFieldLabel">Subject:</span></td>
+	      <td class="formRow">
+		<input type="text" name="subject" size="64" maxlength="100" tabindex="3" value="{{subject_content}}" style="font-family: Verdana, Helvetica, Lucida, Arial, sans-serif; font-size: 12px; color: #033;">
+	      </td>
+	    </tr>
+{{/section:subject}}
+
+{{section:crosspost}}
+	<tr>
+	  <td valign="top" align="right">
+	    <span class="formFieldLabel">Crosspost:</span>
+	  </td>
+	  <td valign="top">
+	    <select name="cross_post_parent_id" tabindex="4"> 
+	      <option>
+		None
+	      </option>
+{{section:crosspost_selection}}
+	      <option value="{{cross_post_parent_id}}" {{cross_post_selected}}>
+		{{cross_post_label}}
+	      </option>
+{{/section:crosspost_selection}}
+
+	    </select> 
+	  </td>
+	</tr>
+{{/section:crosspost}}
+
+	<tr>
+	<td>
+	  &nbsp;
+	</td>
+	  <td valign="top" align="left" colspan="2">
+	    <table border="0" cellspacing="0" cellpadding="0" width="10%">
+	      <tr align="center" valign="middle">
+		<td>
+		  <span class="genmed"> <input type="button" class="postButton" tabindex="10" accesskey="b" name="addbbcode0" value=" B " style="font-weight:bold;" onclick="bbstyle(0)" onmouseover="helpline('b')" /> </span> 
+		</td>
+		<td>
+		  <span class="genmed"> <input type="button" class="postButton" tabindex="11" accesskey="i" name="addbbcode2" value=" i " style="font-style:italic;" onclick="bbstyle(2)" onmouseover="helpline('i')" /> </span> 
+		</td>
+		<td>
+		  <span class="genmed"> <input type="button" class="postButton" tabindex="12" accesskey="u" name="addbbcode4" value=" u " style="text-decoration: underline;" onclick="bbstyle(4)" onmouseover="helpline('u')" /> </span> 
+		</td>
+		<td>
+		  <span class="genmed"> <input type="button" class="postButton" tabindex="13" accesskey="q" name="addbbcode6" value="Quote"  onclick="bbstyle(6)" onmouseover="helpline('q')" /> </span> 
+		</td>
+		<td>
+		  <span class="genmed"> <input type="button" class="postButton" tabindex="14" accesskey="c" name="addbbcode16" value="PHP Code" onclick="bbstyle(16)" onmouseover="helpline('c')" /> </span> 
+		</td>
+		<td>
+		  <span class="genmed"> <input type="button" class="postButton" tabindex="15" accesskey="w" name="addbbcode18" value="URL" onclick="bbstyle(18)" onmouseover="helpline('w')" /> </span> 
+		</td>
+		<td>
+		  <span class="genmed"> <input type="button" class="postButton" tabindex="16" accesskey="p" name="addbbcode20" value="PRE" onclick="bbstyle(20)" onmouseover="helpline('p')" /> </span> 
+		</td>
+	      </tr>
+	      <tr>
+		<td colspan="7">
+		  <span class="gensmall"> <input type="text" name="helpbox" size="45" maxlength="100" style="width:450px; font-size:10px" class="helpline" value="TIP: Styles can be applied to selected text" /> </span> 
+		</td>
+	      </tr>
+	    </table>
+	  </td>
+	</tr>
+	<tr>
+	  <td valign="top">
+	    <table width="42" border="0" cellspacing="0" cellpadding="5">
+	      <tr align="center">
+		<td colspan="2" class="gensmall">
+		  <span class="formFieldLabel">Emoticons</span> 
+		</td>
+	      </tr>
+	    <tr align="center" valign="middle">
+	      <td>
+		<a href="javascript:emoticon(':D')"><img src="/images/emoticons/icon_biggrin.gif" width="15" height="15" align="abs_middle" border="0" alt="Very Happy" title="Very Happy" /></a> 
+	      </td>
+	      <td>
+		<a href="javascript:emoticon(':)')"><img src="/images/emoticons/icon_smile.gif" width="15" height="15" align="abs_middle" border="0" alt="Smile" title="Smile" /></a> 
+	      </td>
+	    </tr>
+	    <tr align="center" valign="middle">
+	      <td>
+		<a href="javascript:emoticon(':(')"><img src="/images/emoticons/icon_sad.gif" width="15" height="15" align="abs_middle" border="0" alt="Sad" title="Sad" /></a> 
+	      </td>
+	      <td>
+		<a href="javascript:emoticon(':o')"><img src="/images/emoticons/icon_surprised.gif" width="15" height="15" align="abs_middle" border="0" alt="Surprised" title="Surprised" /></a> 
+	      </td>
+	    </tr>
+	      <tr align="center" valign="middle">
+		<td>
+		  <a href="javascript:emoticon(':8O:')"><img src="/images/emoticons/icon_eek.gif" width="15" height="15" align="abs_middle" border="0" alt="Shocked" title="Shocked" /></a> 
+		</td>
+		<td>
+		  <a href="javascript:emoticon(':?:')"><img src="/images/emoticons/icon_confused.gif" width="15" height="15" align="abs_middle" border="0" alt="Confused" title="Confused" /></a> 
+		</td>
+	      </tr>
+	    <tr align="center" valign="middle">
+	      <td>
+		<a href="javascript:emoticon(':8):')"><img src="/images/emoticons/icon_cool.gif" width="15" height="15" align="abs_middle" border="0" alt="Cool" title="Cool" /></a> 
+	      </td>
+	      <td>
+		<a href="javascript:emoticon(':lol:')"><img src="/images/emoticons/icon_lol.gif" width="15" height="15" align="abs_middle" border="0" alt="Laughing" title="Laughing" /></a> 
+	      </td>
+	    </tr>
+	    <tr align="center" valign="middle">
+	      <td>
+		<a href="javascript:emoticon(':x:')"><img src="/images/emoticons/icon_mad.gif" width="15" height="15" align="abs_middle" border="0" alt="Mad" title="Mad" /></a> 
+	      </td>
+	      <td>
+		<a href="javascript:emoticon(':P')"><img src="/images/emoticons/icon_razz.gif" width="15" height="15" align="abs_middle" border="0" alt="Razz" title="Razz" /></a> 
+	      </td>
+	    </tr>
+	    <tr align="center" valign="middle">
+	      <td>
+		<a href="javascript:emoticon(':oops:')"><img src="/images/emoticons/icon_redface.gif" width="15" height="15" align="abs_middle" border="0" alt="Embarassed" title="Embarassed" /></a> 
+	      </td>
+	      <td>
+		<a href="javascript:emoticon(':cry:')"><img src="/images/emoticons/icon_cry.gif" width="15" height="15" align="abs_middle" border="0" alt="Crying or Very sad" title="Crying or Very sad" /></a>
+	      </td>
+	    </tr>
+	    <tr align="center" valign="middle">
+	      <td>
+		<a href="javascript:emoticon(':evil:')"><img src="/images/emoticons/icon_evil.gif" width="15" height="15" align="abs_middle" border="0" alt="Evil or Very Mad" title="Evil or Very Mad" /></a> 
+	      </td>
+	      <td>
+		<a href="javascript:emoticon(':twisted:')"><img src="/images/emoticons/icon_twisted.gif" width="15" height="15" align="abs_middle" border="0" alt="Twisted Evil" title="Twisted Evil" /></a> 
+	      </td>
+	    </tr>
+	    <tr align="center" valign="middle">
+	      <td>
+		<a href="javascript:emoticon(':roll:')"><img src="/images/emoticons/icon_rolleyes.gif" width="15" height="15" align="abs_middle" border="0" alt="Rolling Eyes" title="Rolling Eyes" /></a> 
+	      </td>
+	      <td>
+		<a href="javascript:emoticon(':wink:')"><img src="/images/emoticons/icon_wink.gif" width="15" height="15" align="abs_middle" border="0" alt="Wink" title="Wink" /></a> 
+	      </td>
+	    </tr>
+	    <tr align="center" valign="middle">
+	      <td>
+		<a href="javascript:emoticon(':!:')"><img src="/images/emoticons/icon_exclaim.gif" width="15" height="15" align="abs_middle" border="0" alt="Exclamation" title="Exclamation" /></a> 
+	      </td>
+	      <td>
+		<a href="javascript:emoticon(':?:')"><img src="/images/emoticons/icon_question.gif" width="15" height="15" align="abs_middle" border="0" alt="Question" title="Question" /></a> 
+	      </td>
+	    </tr>
+	    <tr align="center" valign="middle">	    
+	      <td>
+		<a href="javascript:emoticon(':idea:')"><img src="/images/emoticons/icon_idea.gif" width="15" height="15" align="abs_middle" border="0" alt="Idea" title="Idea" /></a> 
+	      </td>
+	      <td>
+		<a href="javascript:emoticon(':arrow:')"><img src="/images/emoticons/icon_arrow.gif" width="15" height="15" align="abs_middle" border="0" alt="Arrow" title="Arrow" /></a> 
+	      </td>
+	    </tr>
+	  </table>
+	</td>
+	<td>
+	  <textarea name="message" tabindex="5" rows="25" cols="64" style="color: #033; font-family; verdana, helvetica, lucida, arial, sans-serif; font-size: 12px;">{{message_content}}</textarea>
+	</td>
+      </tr>
+{{section:encryption}}
+      <tr>
+	<td class="formRow" align="right"><span class="formFieldLabel">Encryption Options:</span></td>
+	<td class="formRow">
+		<input type="checkbox" name="encrypt_message" tabindex="6"  {{encrypt_body_checked_flag}}>
+		<span class="formFieldValue">Encrypt Message&nbsp;&nbsp;
+		<input type="checkbox" name="encrypt_subject" tabindex="7" {{encrypt_subject_checked_flag}}>
+		Encrypt Subject <span class="tipText">(only if message is also encrypted)</span></span></td>
+      </tr>
+{{/section:encryption}}
+
+	<tr>
+	  <td colspan="2" class="buttonRow" align="right">
+	    &nbsp;<input type="submit" name="cancel" value="Cancel" tabindex="9"> <input type="submit" name="{{submit_button_name}}" value="{{submit_button_text}}" tabindex="8"> 
+          </td>
+	</tr>
+    
+{{section:parent_quote autohide="yes"}}
+	<tr>
+	  <td colspan="2">
+      <br>
+      For reference, here is the original poster's comment.
+      <hr>
+      </td>
+	</tr>
+	<tr>
+	  <td colspan="2">
+      {{parent_body}}
+      </td>
+	</tr>
+{{/section:parent_quote}}    
+    
+   </table>
+</form>
+<!-- END comment_form SECTION -->
+{{/section:comment_form}}
+
+{{formatting_javascript}}

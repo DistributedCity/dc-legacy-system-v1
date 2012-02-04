@@ -1,0 +1,70 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+        "http://www.w3.org/TR/1998/REC-html40-19980424/loose.dtd">
+
+<html>
+  <head>
+    <title>Distributed City: Login</title> 
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <link rel="stylesheet" href="/dcStyles.css" type="text/css">
+    <link REL="SHORTCUT ICON" href="/favicon.ico">
+  </head>
+  <body text="#003333">
+    <p>&nbsp;</p>
+    <form method="post" action="?action=login">
+      <table width="50%" border="0" cellspacing="0" cellpadding="0" align="center">
+	  <tr>
+	    <td>
+	      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+		  <tr>
+		    <td class="headerLeft"><img src="/images/master/loginHeaderLeft.gif" width="341" height="39"></td>
+		    <td class="headerRight"><img src="/images/master/loginHeaderRight.gif" width="84" height="39"></td>
+		  </tr>
+	      </table>
+	    </td>
+	  </tr>
+	  <tr>
+	    <td>
+	      <table width="100%" border="0" cellspacing="0" cellpadding="5" align="center">
+		{{section:error autohide="yes"}}
+		  <tr>
+		    <td class="errorCell" colspan="3"><span class="errorText">{{error_text}}</span></td>
+		  </tr>
+	      {{/section:error}}
+	  <tr>
+	    <td align="right" class="formRow"><span class="formFieldLabel">Nym:</span></td>
+	    <td class="formRow">
+	      <input type="text" name="username" size="32" value="{{username}}">
+	    </td>
+	    <td class="formRow">&nbsp;</td>
+	  </tr>
+	  <tr>
+	    <td align="right" class="formRow"><span class="formFieldLabel">Password:</span></td>
+	    <td class="formRow">
+	      <input type="password" name="password" size="32">
+	    </td>
+	    <td width="100%" class="formRow">
+	      <input type="submit" name="login" value="Login" class="formButton">
+	    </td>
+	  </tr>
+      </table>
+    </td>
+    </tr>
+      <tr>
+	<td align="center" class="buttonRow">
+	  <table>
+	    <tr>
+		<td>
+		  <input type="submit" name="registration" value="Create New Account" class="formButton"><br>
+		</td>
+	      </tr>
+	  </table>
+	</td>
+      </tr>
+      <tr>
+      <td class="pagePrompt">
+      <p><em>TIP:</em> <span class="tipText">Nyms cannot contain spaces, but may include _ characters</span></p>
+      <p>Distributed City is a Nexus of Sovereign Individuals.</p>
+      <p>A streamlined, secure community environment that provides News, Forums, Weblogs, OpenPGP Messaging, and anonymous chat to members.</p>
+      <p>Membership is currently by referral of an existing member only.</p></table>
+  </body>
+</html>

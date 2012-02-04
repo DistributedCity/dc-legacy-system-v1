@@ -1,0 +1,173 @@
+{{section:profile_display}}
+    <table width="100%" border="0" cellspacing="0" cellpadding="3">
+      <tr>
+	<td class="pageTitle"><img src="{{user_image_src}}" alt="[IMG]" width="32" height="32"></td>
+	<td width="100%" class="pageTitle">{{username}}</td>
+      </tr>
+    </table>
+    <table width="100%" border="0" cellspacing="0" cellpadding="3">
+      <tr align="center">
+	<td class="pagePrompt" colspan="2">
+	  <span class="generalButton"><a href="/messaging/?action=compose&uid={{user_id}}">Send a Private Message</a></span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="generalButton"><a href="/news/weblogs/?uid={{user_id}}">View Weblog</a></span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="generalButton"><a href="/user/settings/?mode=buddy_list&action=add_buddy&uid={{user_id}}">Add to your Buddy List</a></span>
+	</td>
+      </tr>
+{{section:profile_error autohide="yes"}} 
+     <tr>
+	<td class="errorCell" colspan="2">
+	  <span class="errorText"><span class="errorLabel">Error:</span> {{error_message}}</span> 
+	</td>
+      </tr>
+{{/section:profile_error}}
+      <tr>
+	<td class="formRow" align="right">
+	  <span class="formFieldLabel">User Since:</span>
+	</td>
+	<td class="formRow" width="100%">
+	  <span class="formFieldValue">{{user_since}}</span>
+	</td>
+      </tr>
+
+      <tr>
+	<td class="formRow" align="right">
+	  <span class="formFieldLabel">Weblog&nbsp;Submissions:</span>
+	</td>
+	<td class="formRow" width="100%">
+	  <span class="formFieldValue"><span class="formFieldValue">{{number_of_posts alt="---"}}</span></span>
+	</td>
+      </tr>
+
+
+      <tr>
+	<td class="formRow" align="right">
+	  <span class="formFieldLabel">Threads&nbsp;&&nbsp;Comments:</span>
+	</td>
+	<td class="formRow" width="100%">
+	  <span class="formFieldValue"><span class="formFieldValue">{{number_of_comments alt="---"}}</span></span>
+	</td>
+      </tr>
+
+
+
+{{section:most_recent_post autohide="yes"}}
+      <tr>
+	<td class="formRow" align="right">
+	  <span class="formFieldLabel">Most&nbsp;Recent&nbsp;Post:</span>
+	</td>
+	<td class="formRow" width="100%">
+	<span class="formFieldValue"><A HREF="/news/article/?aid={{most_recent_post_id}}"><b>{{most_recent_post_subject}}<b></a>&nbsp;<nobr>{{most_recent_post_date}}</nobr></span>
+	</td>
+      </tr>
+{{/section:most_recent_post}}
+{{section:email autohide="yes"}}
+      <tr>
+	<td class="formRow" align="right">
+	  <span class="formFieldLabel">Email:</span>
+	</td>
+	<td class="formRow" width="100%">
+	<span class="formFieldValue">{{email}}</span>
+	</td>
+      </tr>
+{{/section:email}}
+{{section:www autohide="yes"}}
+      <tr>
+	<td class="formRow" align="right">
+	  <span class="formFieldLabel">WWW:</span>
+	</td>
+	<td class="formRow">
+	<span class="formFieldValue">{{www}}</span>
+	</td>
+      </tr>
+{{/section:www}}
+{{section:specialties autohide="yes"}}
+      <tr>
+	<td class="formRow" align="right">
+	  <span class="formFieldLabel">Specialties:</span>
+	</td>
+	<td class="formRow">
+	<span class="formFieldValue">{{specialties}}</span>
+	</td>
+      </tr>
+{{/section:specialties}}
+{{section:company autohide="yes"}}
+      <tr>
+	<td class="formRow" align="right">
+	  <span class="formFieldLabel">Company/Association:</span>
+	</td>
+	<td class="formRow">
+	<span class="formFieldValue">{{company_association}}</span>
+	</td>
+      </tr>
+{{/section:company}}
+{{section:dmt_usd_claim_number autohide="yes"}}
+      <tr>
+	<td class="formRow" align="right">
+	  <span class="formFieldLabel">DMT/ALTA&nbsp;<em>USD</em> Claim&nbsp;Number:</span>
+	</td>
+	<td class="formRow">
+	<span class="formFieldValue">{{dmt_usd_claim_number}}</span>
+	</td>
+      </tr>
+{{/section:dmt_usd_claim_number}}
+{{section:quote autohide="yes"}}
+      <tr>
+	<td class="formRow" align="right">
+	  <span class="formFieldLabel">Quote:</span>
+	</td>
+	<td class="formRow">
+	<span class="formFieldValue">{{quote}}</span>
+	</td>
+      </tr>
+{{/section:quote}}
+{{section:comments autohide="yes"}}
+      <tr>
+	<td valign="top" class="formRow" align="right">
+	  <span class="formFieldLabel">Comments:</span>
+	</td>
+
+
+    <td class="commentContent">{{comments}}</td>
+
+      </tr>
+{{/section:comments}}
+      <tr>
+	<td colspan="2" class="buttonRow">&nbsp;</td>
+      </tr>
+    </table>
+
+{{section:blog_recommendations autohide="yes"}}
+<hr>
+<p><big>{{username}} Recommended Blogs:</big></p><multicol cols="3"><ul>
+{{section:blog_recommendation_item}}
+<li><A HREF="/news/weblogs/?uid={{recommended_blog_user_id}}">{{recommended_blog_username}}</a></li>
+{{/section:blog_recommendation_item}}
+</ul></multicol>
+{{/section:blog_recommendations}}
+
+{{/section:profile_display}}    
+
+{{section:profile_directory}}
+    <table width="100%" cellpadding="3" cellspacing="0" border="0">
+      <tr>
+	<td class="pageTitle">
+	  User Directory {{section:browse_section autohide="yes"}}{{start_letter}} - {{end_letter}}{{/section:browse_section}}
+	</td>
+      </tr>
+      <tr>
+	<td class="pagePrompt">
+	  Below are listed all of the avatars in Distributed City. Click on any to view a profile.
+	</td>
+      </tr>
+    </table>
+    <table width="100%" cellpadding="3" cellspacing="0" border="0">
+
+{{user_listing_block}}
+
+    <tr>
+      <td class="buttonRow" colspan="5">
+	&nbsp;
+      </td>
+    </tr>
+  </table>
+{{/section:profile_directory}}
+
+{{public_key_info_block}}

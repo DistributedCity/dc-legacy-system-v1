@@ -1,0 +1,28 @@
+<VirtualHost distributedcity.com>
+
+   ServerAdmin webmaster@distributedcity.com
+   DocumentRoot /home/websites/dc_public_beta_dev/htdocs
+   ServerName distributedcity.com
+   ErrorDocument 404 /404.html
+
+   DirectoryIndex index.php
+
+   php_value session.use_cookies     1
+   php_value session.name            "SID"
+   php_value session.save_path       /home/websites/sessions
+   php_value session.gc_probability  0
+
+   php_value auto_prepend_file 	config/startup.php
+   php_value auto_append_file 	config/shutdown.php
+
+   php_admin_flag magic_quotes_gpc off
+   php_admin_flag register_globals on
+   php_value include_path  	/home/websites/dc_public_beta_dev/:/home/websites/lp_common/php/third_party/pear-4.0.5:/home/websites/lp_common/php/third_party/yats-0.91/utils:/home/websites/lp_common/php/third_party/xmlrpc-epi-0.50/:/home/websites/lp_common/php/utils/
+
+    <Directory /websites/dc_public_beta_dev/htdocs>
+        Options FollowSymLinks Indexes ExecCGI
+        AllowOverride None 
+    </Directory>
+
+</VirtualHost>
+ 

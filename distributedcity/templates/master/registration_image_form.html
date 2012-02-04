@@ -1,0 +1,96 @@
+{{section:new_user_setup autohide="yes"}}
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" 
+        "http://www.w3.org/TR/1998/REC-html40-19980424/loose.dtd"> 
+ 
+<html> 
+  <head> 
+    <title>Distributed City: Choose Nym Image</title>  
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+    <link rel="stylesheet" href="/dcStyles.css" type="text/css"> 
+    <link REL="SHORTCUT ICON" href="/favicon.ico"> 
+  </head> 
+  <body text="#003333"> 
+    <FORM ACTION="?action=registration_gpg&SID={{sid}}" METHOD="POST">
+      <TABLE WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+	  <TR>
+	        <TD>
+	            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+		  <tr>
+		        <td class="headerLeft"><img src="/images/master/loginHeaderLeft.gif" width="341" height="39"></td>
+		        <td class="headerRight"><img src="/images/master/newAccountHeaderRight.gif" width="84" height="39"></td>
+		      </tr>
+		        </table>
+	          </TD>
+	      </TR>
+	    <TR>
+	        <TD>
+{{/section:new_user_setup}}
+
+
+	            <table width="100%" border="0" cellspacing="0" cellpadding="3">
+		  <tr>
+		        <td class="pageTitle">
+		           {{section:user_settings}}Change Nym Image{{/section:user_settings}}{{section:new_user_setup}} Step 3 of 3: Choose your Nym Image{{/section:new_user_setup}}
+		          </td>
+		      </tr>
+		    <tr>
+		        <td class="pagePrompt">
+		            <p>
+			    Below are displayed an array of possible images for your Nym. Click on a image to specify it as your Nym image.The Nym image you choose will be associated with you - it will be displayed next to your comments, your News and Weblog articles, and in your Profile. Use the tabs to navigate through the sets of images.
+			      </p>
+		        </td>
+		    </tr>
+		  </table>
+	            <table width="100%" border="0" cellspacing="0" cellpadding="3">
+		  <tr>
+		    <td width="100%" class="subTabSpacer">
+		              &nbsp;
+		      </td>
+
+
+{{section:RegistrationTab}}
+		        <td class="subTabLeft{{tab_state}}">
+<a href="?action=registration_image&show_group={{show_group}}&show_section={{show_section}}">{{show_section_label}}</a>
+		          </td>
+{{/section:RegistrationTab}}
+
+{{section:SettingsTab}}
+		        <td class="subTabLeft{{tab_state}}">
+
+<a href="?mode=general&action=change_image_form&show_group={{show_group}}&show_section={{show_section}}">{{show_section_label}}</a>
+		          </td>
+{{/section:SettingsTab}}
+
+
+
+		        <td class="subTabRight">
+		            &nbsp;
+		          </td>
+		      </tr>
+		        </table>
+
+	            <table width="100%" border="0" cellspacing="0" cellpadding="5">
+{{section:icon_row}}
+<tr>
+{{avatar_rows}}
+</tr>
+{{/section:icon_row}}
+	        <tr>
+	        <td colspan="10" class="buttonRow">
+	            &nbsp;
+	          </td>
+	      </tr>
+	        </table>
+
+
+{{section:new_user_setup}}
+          </td>
+        </tr>
+      </table>
+    </TD>
+    </TR>
+    </TABLE>
+    </form>
+  </body>
+</html>
+{{/section:new_user_setup}}

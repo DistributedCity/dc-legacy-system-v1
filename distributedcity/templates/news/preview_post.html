@@ -1,0 +1,64 @@
+{{location_bar}}
+ <!-- BEGIN comment_form SECTION -->
+    <form method="post" action="?action=new_post" name="post">
+      {{section:hidden_form_vars}}
+      <input type="hidden" name="{{hidden_name}}" value="{{hidden_value}}">
+      {{/section:hidden_form_vars}}
+      <table align="center" border="0" cellpadding="3" cellspacing="0" width="100%">
+
+	<tr>
+	  <td colspan="2" class="pageTitle">
+	    Preview - Sanity Check!
+	  </td>
+	</tr>
+	<tr>
+	  <td class="pagePrompt" colspan="2">
+	    This is what your blog entry will look like once it is submitted. You will not have any further chance
+        to edit it, so you should read it over carefully for spelling mistakes, formatting errors,
+        idiotic blunders, gratuitous puns, missing swearwords, and so forth.
+	  </td>
+	</tr>
+
+
+{{section:error autohide="yes"}}
+    <tr>
+      <td class="errorCell" colspan="2"><span class="errorLabel">Error:</span>&nbsp;{{error_message}}
+      </td>
+    </tr>
+{{/section:error}}
+
+    <table width="100%" cellpadding="3" cellspacing="0">
+      <tr>
+	<td class="topicTitleRow">
+	  <table width="100%" border="0" cellspacing="0" cellpadding="3">            
+	    <tr>
+	      <td rowspan="2"><img src="{{user_image_src}}" alt="poster avatar" width="32" height="32"></td>
+	      <td width="100%" class="topicSubjectCell">{{section:subject autohide="yes"}}{{subject}}{{/section:subject}}</td>
+	    </tr>
+	    <tr>
+	      <td class="topicBylineCell"><span class="newsItemSubtitleText">by <a href="/search/?profile={{poster_id}}">{{poster_username}}</a> in {{topic_name}} on <nobr>{{date_time}}</nobr></span>
+	      </td>
+	    </tr>
+	    </table>
+          </td>
+        </tr>
+        <tr>
+          <td class="topicContentCell">
+          {{leadin}}
+          {{body}}
+          &nbsp;
+          </td>
+        </tr>
+
+        <td class="commentFooter" height="19">
+	</td>
+      </tr>
+      
+     <tr>
+         <td colspan="2" class="buttonRow" align="right">
+<input type="submit" name="cancel" value="Back"> <input type="submit" name="new_post" value="Make it so!"> 
+         </td>
+     </tr>
+      
+
+   </table>

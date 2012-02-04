@@ -1,0 +1,102 @@
+
+SOME DISTRIBUTEDCITY TODOS.
+
+
+Design / Scalability Issues:
+
+- Top Priority for 1.1!
+
+  Use single complex queries to gather comment totals rather
+  than multiple looping queries.  Same for other looping queries.
+  'Forum Top' page does _way_ too many queries.  
+  A good goal: 5 DB queries per requested page.  
+  
+  This might require structuring the data differently for more 
+  efficient retrieval.
+
+- database layer should be cleanly separated from application layer
+  with a small and well documented API.  Nice if all DB queries
+  are in a single file or well defined set of files.
+
+- All user data should be stored in the Database.  There should
+  not be any disk storage for keys (or anything else) required.
+  This provides for easier backup/restore and for using multiple
+  web servers with a single DB.
+  
+- identify any DB queries that may happen more than once in a given
+  request and cache them in memory.
+  
+- user text display is an inefficient multi-pass process to translate
+  all the URLs, bold, etc.  Each string is processed several times.  
+  It should be re-written as a single pass with a decent parser / state 
+  engine.
+  
+
+Maintenance Issues:
+
+- DB schema should use foreign keys to ensure data integrity.
+
+- DB schema should use NOT NULL fields and other check constraints.
+
+- Get rid of dba/gdbm cacheing code. This code is buggy and causes
+  "driver initialization failed" messages to appear intermittently on
+  the displayed web pages.
+
+- presentation layer should be cleanly separated from application logic.
+  There should not be any human language specific strings in the code.
+  
+- error codes and strings should be defined apart from the code.
+
+- The way comment types and article types are differentiated is bad and
+  requires lots of redundant special case code.
+  
+- application should be more modular.  too much spaghetti code and
+  inter-dependencies.
+
+
+Cool New Features We Could Add:
+
+- Signup payment mechanism via DBC, ALTA
+
+- Referral process
+
+- Generic DC Registration/Username Server
+
+- Additional Services for the sovereign individual / perpetual traveller / developer,
+  tied together via registration server:
+  
+   - squid proxy server
+   - OpenNap server
+   - nntp server (newsgroups)
+   - cvs server, subversion
+   - mail server (secure pop, imap)
+   - mixmaster anon mail sending
+   - ssh (shell)
+   - DB access (postgres, mysql)
+   - PGP key server
+   - jabber server
+   - bugzilla
+
+- Java IIP Chat applet
+
+- Weblogs optionally visible on non ssl site and/or to
+  non logged in (guest) visitors
+
+- Upload your own nym picture
+
+- Full text search
+
+- Distributed Data Store
+
+- Reputation system
+
+
+
+
+$Log: TODO.txt,v $
+Revision 1.2  2002/10/01 05:50:24  gente_libre
+gdbm note
+
+Revision 1.1  2002/09/28 08:01:25  gente_libre
+initial TODO doc, for DC 1.0
+

@@ -1,0 +1,23 @@
+<H2>Addresses and Address Groups:</h2>
+<h3>Click on an entry to compose a new message to the addresses.</h3>
+<table border="1" width="100%">
+
+{{section:error_message autohide="yes"}}
+<TR><TD colspan="2">Error: {{error_message}}</TD></TR>
+{{/section:error_message}}
+
+
+{{section:status_message autohide="yes"}}
+<TR><TD colspan="2">OK: {{status_message}}</TD></TR>
+{{/section:status_message}}
+
+{{section:addresses autohide="yes"}}
+<TR><TD><a href="/messaging/?action=compose&uid={{address_entry_uid}}">{{address_entry_label}}</a></TD><TD><a href="/messaging/?action=addresses&delete_address={{address_entry_id}}">[ DELETE ]</a></TD></TR>
+{{/section:addresses}}
+
+</TABLE>
+
+<form action="?action=addresses&SID={{sid}}" method="post">
+<input type="text" name="new_address" size="50" value="{{new_address}}">
+<input type="submit" name="add_new_address" value="Add new address">
+</form>

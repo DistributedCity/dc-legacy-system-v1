@@ -1,0 +1,92 @@
+{{section:test_encrypt_form autohide="yes"}}
+<form action="?mode=gpg&SID={{sid}}" method="post">
+<table width="100%" border="0" cellspacing="0" cellpadding="3">
+      <tr>
+	<td class="pageTitle">
+	  OpenPGP Encryption/Decryption Loopback Test
+	  </td>
+	</tr>
+</table>
+{{gpg_submenu}}
+<table width="100%" border="0" cellspacing="0" cellpadding="3">
+      <tr>
+	<td colspan="2" class="pagePrompt">
+{{instructions}}
+	  </td>
+	</tr>
+      <tr>
+	<td align="right" class="formRow">
+	  <span class="formFieldLabel">Encrypt&nbsp;To:</span>
+	  </td>
+	<td width="100%" class="formRow">
+	  <span class="formFieldValue">{{username}}</span>
+	  </td>
+	</tr>
+      <tr>
+	<td valign="top" align="right" class="formRow">
+	  <span class="formFieldLabel">Test&nbsp;Message:</span>
+	  </td>
+	<td class="formRow">
+	  <textarea name="message_plaintext" rows="5" cols="42" style="font-face: verdana, helvetica, arial, lucida, sans-serif; font-size: 9px;">{{message_plaintext}}</textarea>
+	  </td>
+	</tr>
+      <tr>
+	<td colspan="2" class="buttonRow" align="right">
+	  <input type="submit" name="encrypt_test" value="Encrypt Message"> 
+	  </td>
+	</tr>
+</table>
+</form>
+{{/section:test_encrypt_form}}
+
+
+
+<!-- ENCRYPTION TEST RESULT -->
+{{section:test_decrypt_form autohide="yes"}}
+<form action="?mode=gpg&SID={{sid}}" method="post">
+<table width="100%" border="0" cellspacing="0" cellpadding="3">
+      <tr>
+	<td class="pageTitle">
+	 OpenPGP Encryption/Decryption Loopback Test
+	  </td>
+	</tr>
+</table>
+{{gpg_submenu}}
+<table width="100%" border="0" cellspacing="0" cellpadding="3">
+      <tr>
+	<td colspan="2" class="pagePrompt">
+	    Displayed below is the encrypted text (called cyphertext) of the message you entered. This is how encrypted Private Messages are stored and transmitted in the Distributed City system. Enter your passphrase and press 'Decrypt Message' to decrypt the message and complete the OpenPGP test.
+	  </td>
+	</tr>
+      <tr>
+	<td align="right" class="formRow">
+	  <span class="formFieldLabel">Encrypted&nbsp;To:</span>
+	  </td>
+	<td width="100%" class="formRow">
+	  <span class="formFieldValue">{{username}}</span>
+	  </td>
+	</tr>
+      <tr>
+	<td align="right" class="formRow">
+	  <span class="formFieldLabel">Enter&nbsp;Passphrase:</span>
+	  </td>
+	<td width="100%" class="formRow">
+	    <input type="password" name="passphrase">
+	  </td>
+	</tr>
+      <tr>
+	<td valign="top" align="right" class="formRow">
+	  <span class="formFieldLabel">Encrypted&nbsp;Message:</span>
+	  </td>
+	<td class="formRow">
+<textarea name="message_ciphertext" rows="15" cols="80" style="font-face: verdana, helvetica, arial, lucida, sans-serif; font-size: 9px;">{{message_ciphertext}}</textarea>
+	  </td>
+	</tr>
+      <tr>
+	<td colspan="2" class="buttonRow" align="right">
+	  <input type="submit" name="decrypt_test" value="Decrypt Message"> 
+	  </td>
+	</tr>
+</table>
+</form>
+{{/section:test_decrypt_form}}

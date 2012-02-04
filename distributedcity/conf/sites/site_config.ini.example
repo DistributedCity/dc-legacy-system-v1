@@ -1,0 +1,36 @@
+# Custom Site configuration
+
+# Site_Instance_Name
+# - We need this because if we are running more than one copy of the system
+#   we will need separate directories (namspace) for the /tmp and /data dirs
+#   since they are outside of the app code and are common to all web apps
+site_instance_name = dc_public_beta_dev
+
+
+# General Path Configuration  (with trailing slash)
+host_root  = /home/websites/
+app_base   = /home/websites/dc_public_beta_dev/
+machine_data_dir    = /home/websites/data/
+machine_tmp_dir   = /home/websites/tmp/
+
+
+# XMLRPC settings for this host
+xmlrpc_host = http://10.0.0.6/
+
+
+# Database Configuration
+#  Note: NEVER place the real database access information
+#        in a config file that is placed in CVS. Poor Security.
+#	 Always manually set this information upon install.
+db_user = postgres
+db_pass = your_password
+db_host = 127.0.0.1
+db_name = distributedcity.dev
+
+# GPG
+gpg_key_size = 4096
+crypto_engine_password=password
+
+# Cache Settings
+# leave this off for now, cache is a little shaky right now
+cache = off

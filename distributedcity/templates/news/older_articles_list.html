@@ -1,0 +1,62 @@
+<table width="100%" border="0" cellspacing="0" cellpadding="3">
+
+{{section:frontpage_header autohide="yes"}}
+      <tr>
+	<td colspan="3" class="pageTitle">
+	  Past {{header_frontpage_name}} Articles
+	</td>
+      </tr>
+{{/section:frontpage_header}}
+
+{{section:topic_header autohide="yes"}}
+      <tr>
+	<td colspan="3" class="pageTitle">
+	  <img src="/images/topics/{{header_topic_name}}.gif" width="32" height="32" align="absmiddle" vspace="2">&nbsp;Past {{header_topic_name}} Articles
+	</td>
+      </tr>
+{{/section:topic_header}}
+{{section:weblog_header autohide="yes"}}
+      <tr>
+	<td colspan="3" class="pageTitle">
+	  <img src="{{user_image_src}}" width="32" height="32" align="absmiddle" vspace="2">&nbsp;Past Articles in <a href="/search/?profile={{header_weblog_user_id}}">{{header_weblog_username}}</a>'s Personal Weblog
+	</td>
+      </tr>
+{{/section:weblog_header}}
+{{section:error autohide="yes"}}
+    <tr>
+      <td class="errorCell" colspan="3"><span class="erroText"><span class="errorLabel">Error:</span> {{error_message}}</span></td>
+    </tr>
+{{/section:error}}
+{{section:colheader autohide="no"}}
+    <tr>
+      <td class="forumListColHeader">Subject</a> </td>
+      <td class="forumListColHeader">Comments</td>
+      <td align="right" class="forumListColHeader">Date</td>
+    </tr>
+{{/section:colheader}}
+{{section:articles autohide="no"}}
+    <tr>
+      <td class="listRow">
+	<A HREF="/news/article/?aid={{article_id}}">{{article_subject}}</a> 
+      </td>
+      <td class="listRow">
+	({{article_posts}})
+      </td>
+      <td align="right" class="listRow">
+	<nobr>{{article_date}}</nobr>
+      </td>
+    </tr>
+{{/section:articles}}
+{{section:articles_none_row autohide="yes"}}
+    <tr>
+      <td class="listRow" colspan="3">
+	There are no past articles to display.
+      </td>
+    </tr>
+{{/section:articles_none_row}}
+    <tr>
+      <td colspan="3" class="buttonRow">
+	&nbsp;
+      </td>
+    </tr>
+  </table>

@@ -1,0 +1,29 @@
+<!-- BEGIN comment.html -->
+    <table width="100%" cellpadding="3" cellspacing="0">
+      <tr>
+	<td class="commentTitleTableRow">
+	  <table width="100%" border="0" cellspacing="0" cellpadding="3">
+	    <tr>
+	      <td rowspan="2"><img src="{{user_image_src}}" alt="poster avatar" width="32" height="32"></td>
+	      <td class="commentTitle" width="100%">{{comment_subject}}</td>
+	    </tr>
+	    <tr>
+	      <td class="commentAuthor">by <a href="/search/?profile={{comment_poster_id}}">{{comment_poster_username}}</a> on <nobr>{{comment_date_time}}</nobr></td>
+	    </tr>
+	  </table>
+	</td>
+      </tr>
+      
+      <tr>
+	<td class="commentContent">{{comment_body}}</td>
+      </tr>
+      
+      <tr>
+	
+	<td class="commentFooter" height="19">
+	  <span class="generalButton"><a href="?reply=true&parent={{comment_id}}">Reply to this</a></span>
+	</td>
+      </tr>
+    </table> 
+{{sub_comment_block}}
+<!-- END comment.html -->

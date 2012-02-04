@@ -1,0 +1,57 @@
+    <table width="100%" border="0" cellspacing="0" cellpadding="3">
+      <tr>
+	<td height="5" colspan="2">
+	  <img src="/images/master/spacer_clear.gif" width="2" height="3"> 
+	</td>
+      </tr>
+      <tr>
+	<td width="100%" class="rightBlockHeader" colspan="2">
+	  &nbsp;Private Messages<img src="/images/master/spacer_clear.gif" width="4" height="2"> 
+	</td>
+      </tr>
+      <tr>
+	<td class="rightBlockContent" colspan="2">
+	  <span class="generalButton"><a href="/messaging/?folder=1">View</a></span>&nbsp;<span class="generalButton"><a href="/messaging/?action=compose">Compose</a></span>
+	</td>
+      </tr>
+    {{section:online}}
+    <tr>
+      <td class="rightBlockDivider" colspan="2">Online</td>
+    </tr>				
+    {{section:buddies_online}}
+    <tr>
+      <td class="rightBlockContent"><a href="/search/?profile={{buddies_online_user_id}}"><img src="{{buddies_online_user_image_src}}" align="absmiddle" hspace="3" height="12" width="12" border="0">&nbsp;{{buddies_online_username}}</a></td>
+      <td>{{buddies_online_icon}}</td>
+    </tr>								
+    {{/section:buddies_online}}
+    {{/section:online}}				
+    
+    {{section:offline}}
+    <tr>
+      <td class="rightBlockDivider" colspan="2">Offline/Hidden</td>
+    </tr>				
+    {{section:buddies_offline}}
+    <tr>
+      <td class="rightBlockContent"><a href="/search/?profile={{buddies_offline_user_id}}"><img src="{{buddies_offline_user_image_src}}" align="absmiddle" hspace="3" height="12" width="12" border="0">&nbsp;{{buddies_offline_username}}</a></td>
+      <td>{{buddies_offline_icon}}</td>
+    </tr>								
+    {{/section:buddies_offline}}
+    {{/section:offline}}	
+    
+    {{section:other_users autohide="yes"}}
+    <tr>
+      <td class="rightBlockDivider" colspan="2">Others</td>
+    </tr>
+    {{section:non_buddies_others}}
+    <tr>
+      <td class="rightBlockContent"><a href="/search/?profile={{other_user_id}}"><img src="{{other_user_image_src}}" align="absmiddle" hspace="3" height="12" width="12" border="0">&nbsp;{{other_username}}</a></td>
+      <td>{{other_icon}}</td>
+    </tr>	
+    {{/section:non_buddies_others}}
+    {{/section:other_users}}
+    <tr>
+      <td class="rightBlockFooter" colspan="2">
+	<img src="/images/master/spacer_clear.gif" width="3" height="5"> 
+      </td>
+    </tr>
+  </table>

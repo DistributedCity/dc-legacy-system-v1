@@ -1,0 +1,62 @@
+<form method="post" action="?mode=security&SID={{sid}}">
+    <table width="100%" border="0" cellspacing="0" cellpadding="3">
+      <tr>
+	<td colspan="3" class="pageTitle">
+	  Security Settings
+	</td>
+      </tr>
+      <tr>
+	<td colspan="3" class="pagePrompt">
+	  To change your password, enter your current password and new password twice. Then press 'Change Password'.
+	</td>
+      </tr>
+    {{section:password_change_error autohide="yes"}}
+    <tr>
+      <td class="errorCell" colspan="3"><span class="errorText"><span class="errorLabel">Error:</span> {{password_change_error}}</span></td>
+    </tr>
+    {{/section:password_change_error}}
+    {{section:password_change_ok autohide="yes"}}
+        <tr>
+          <td class="reportCell" colspan="3"><span class="reportText">{{password_change_ok}}</span></td>
+        </tr>
+    {{/section:password_change_ok}}
+    <tr>
+      <td align="right" class="formRow">
+	Current&nbsp;Password:
+      </td>
+      <td class="formRow">
+	<input type="password" name="password_current"> 
+      </td>
+      <td width="100%" class="formRow">
+	&nbsp;
+      </td>
+    </tr>
+    <tr>
+      <td align="right" class="formRow">
+	New&nbsp;Password:
+      </td>
+      <td class="formRow">
+	<input type="password" name="password_new"> 
+      </td>
+      <td class="formRow">
+	&nbsp;
+      </td>
+    </tr>
+    <tr>
+      <td align="right" class="formRow">
+	Confirm&nbsp;New&nbsp;Password:
+      </td>
+      <td class="formRow">
+	<input type="password" name="password_new_confirm"> 
+      </td>
+      <td class="formRow">
+	&nbsp;
+      </td>
+    </tr>
+    <tr>
+      <td colspan="3" class="buttonRow" align="right">
+	<input type="submit" name="change_password" value="Change Password"> 
+      </td>
+    </tr>
+  </table>
+</form>

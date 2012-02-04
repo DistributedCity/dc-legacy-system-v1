@@ -1,0 +1,41 @@
+	<table width="125" border="0" cellspacing="0" cellpadding="3">
+				<tr>
+					<td height="5">
+						<img src="/images/master/spacer_clear.gif" width="2" height="3"> 
+					</td>
+				</tr>
+				<tr>
+					<td width="100%" class="rightBlockHeader" colspan="2">
+						&nbsp;You are:
+					</td>
+				</tr>
+				<tr>
+					<td class="rightBlockContent">
+   						<a href="/user/settings/"><img src="{{user_image_src}}" alt="{{username}} avatar" width="32" height="32" border="0"></a>
+					</td>
+					<td class="rightBlockContent" width="100%">
+   						<a href="/user/settings/">{{username}}</a><br><br>
+   						<span class="logoutButton"><a href="/logout/">LOGOUT</a></span>
+					</td>
+				</tr>
+{{section:admin_menu}}
+				<tr>
+				  <td class="rightBlockDivider" colspan="2">Admin Menu</td>
+				</tr>				
+				<tr>
+				  <td class="rightBlockContent" colspan="2"><a href="/news/moderation/">Moderation</a></td>
+				</tr>								
+{{/section:admin_menu}}				
+				<tr>
+				  <td class="rightBlockDivider" colspan="2">Your Weblog</td>
+				</tr>
+				<tr>
+				  <td class="rightBlockContent" colspan="2"><span class="generalButton"><a href="/user/weblog/">View</a></span>&nbsp;<span class="generalButton">
+<a href="/user/weblog/?action=new_post_form">New&nbsp;Entry</a></span></td>
+				</tr>
+				<tr>
+					<td class="rightBlockFooter" colspan="2">
+						<img src="/images/master/spacer_clear.gif" width="3" height="5"> 
+					</td>
+				</tr>
+			</table>

@@ -1,0 +1,51 @@
+<!-- BEGIN SUMMARY BLOCK -->
+<form method="post" action="?SID={{sid}}">
+    <table width="100%" border="0" cellspacing="0" cellpadding="3">
+      <tr>
+	<td class="newsItemTitle">
+	  {{subject}}
+	  </td>
+	</tr>
+      <tr>
+	<td class="newsItemSubtitle">
+	  <table border="0" cellpadding="0" cellspacing="0">
+	    <tr>
+	      <td>
+		<img src="{{user_image_src}}" ALT="[IMG]" hspace="3" width="16" height="16">
+	      </td>
+		<td width="100%">
+		<span class="newsItemSubtitleText">Posted by <a href="/search/?profile={{poster_id}}">{{poster_username}}</a> in {{category_name}}:&nbsp;{{topic_name}} on <nobr>{{date_time}}</nobr></span>
+	    </tr>
+	  </table>
+	  </td>
+	</tr>
+      <tr>
+	<td class="newsItemContent">
+<a href="/categories/category/?category_id={{category_id}}"><img src="/images/topics/{{category_icon}}.gif" border="0" width="64" height="64" align="right" hspace="3" alt="{{topic_alt}}"></a><textarea name="leadin" rows="8" cols="64" class="formText">{{leadin}}</textarea>
+	  </td>
+	</tr>
+      <tr>
+	<td class="newsItemFooter">
+	  <a href="/news/weblogs/article/?aid={{id}}" class="readMoreLink">Read More</a> <span class="postCount">({{comment_count_text}})</span>
+	  </td>
+	</tr>
+         <tr>
+          <td class="adminFooter" align="right">
+<input type="hidden" name="action" value="moderate">
+<input type="hidden" name="article_id" value="{{id}}">
+<input type="hidden" name="topic_id" value="{{topic_id}}">
+<input type="submit" name="moderate_front_page" value="Send to Front Page">
+<input type="submit" name="moderate_pass" value="Pass">
+	  </td>
+        </tr>
+</form>
+
+      <tr>
+	<td>
+	  <img src="/images/master/spacer_clear.gif" width="2" height="3">
+	  </td>
+	</tr>
+      </table>
+
+<!-- END SUMMARY BLOCK -->
+

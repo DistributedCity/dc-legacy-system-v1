@@ -1,0 +1,250 @@
+Installing and Running the Distributed City Project Community System
+------------------------------------------
+  
+Overview  
+  
+  Welcome to the Distributed City Community System! To Install you will:
+  
+    * Check Requirements
+    
+    * Copy code to correct host location
+    
+    * Create a custom configuration file and edit your vhost file
+
+    * Create database and populate with base schema
+
+    * Setup CRON jobs
+
+    * Fix Permission Settings
+
+    * Restart Apache
+
+    * Initialize system admin accounts.
+
+    * Install Python Postgres DB Driver
+
+
+
+Requirements (or at least what we run this system on):
+
+    OS: Linux (Mandrake/RedHat)
+
+    Webserver: apache-1.3/php_mod compiled with:
+     - YATS templating system: http://yats.sourceforge.net/
+     - XMLRPC-EPI library: http://xmlrpc-epi.sourceforge.net/
+
+    Python: Python 2.1.1
+
+    DBMS: postgresql-7.2.1
+
+
+Installation
+          
+    Perform the following steps:
+
+    
+      1. Find a software installation directory that is accessible by
+         your webserver where you keep your apache virutal hosts. 
+
+           example: /home/websites/
+
+
+
+      2. Untar into the websites directory these tarballs:
+
+          - distributedcity-web-1.0b.tar.gz
+          - lp_common-1.0.tar.gz
+          
+
+           example:
+                    cd /home/websites/
+                    tar xvfz distributedcity-web-1.0b.tar.gz
+                    tar xvfz lp_common-1.0.tar.gz
+
+           This will extract all files to the directory:
+
+                    /home/websites/distributedcity-web/
+		    and
+		    /home/websites/lp_common/
+
+
+
+      3. Create the postgresql database.
+
+           example:
+                    createdb distributedcity
+
+
+
+      4. Populate the database using the SQL file located in the file:
+
+	   /home/websites/distributedcity/sql/dc.sql
+
+           example:
+                    psql distributedcity </home/websites/distributedcity/sql/dc.sql
+
+
+
+      4. Create a custom vhost.conf file for this site.
+
+	 Copy the vhost.conf.example file to a new file you will use
+	 for this sites vhost.conf say your site is called siteX:
+
+	 cp /home/websites/distributedcity/conf/sites/vhost.conf.example /home/websites/distributedcity/conf/vhost.conf
+
+	 - Edit the file: /home/websites/distributedcity/conf/vhost.conf
+
+	   To reflect your sites apache settings. Make sure that:
+
+           * The /home/websites/lp_common/ directory is properly
+	     referenced according to your setup
+
+           * The 404 "page not found" (templates/master/404.html) is properly referenced
+
+
+      5. Configure apache to load this vhost file. Typically this is
+         set in the apache conf file.
+
+	 example:
+
+	   /etc/httpd/conf/httpd.conf
+
+	   adding the lines:
+	   
+	   Listen distributedcity.com:80
+	   Include /home/websites/distributedcity/conf/vhost.conf
+
+
+      5. Create a custom site_config.ini file for this site.
+
+	 Copy the site_config.ini.example file to a new file you will use
+	 for this sites site_config.ini.conf say your site is called siteX:
+
+	 cp /home/websites/distributedcity/conf/sites/site_config.ini.example /home/websites/distributedcity/conf/site_config.ini
+
+	 - Edit the file: /home/websites/distributedcity/conf/site_config.ini
+	   To reflect your sites php settings.
+
+         Note: all of the parameters listed in the site_config.ini.example file are required.
+  
+         Also: the gpg_key_size=4096 for production machines etc. I prefer 768 for fast testing.
+
+         Testing the xmlrpc_host setting (After apache and everything is setup):
+
+	    You can do a little test to see if <estaban> I should put in a note that to test the xmlrpc_host comms to do:
+            lynx your_xmlrpc_host_setting/xmlrpc/
+
+	    You should get good connection, and a page containing
+	    nothing should load. If you get a connection problem, then
+	    there is a problem with your host, or your setting to
+	    access it
+
+	    If your site is ssl, and you have openssl installed you can also test the settings via:
+
+            > openssl s_client -host <host> -port <port>
+              ... connect ...
+            > GET /xmlrpc/ HTTP/1.0
+
+
+
+      6. Install Postgres Python lib.
+
+          - Go to: /home/websites/lp_common/python/thirdparty/PyGreSQL-3.2
+
+          Note: You may need to modify the setup.py to find the right include dir.   
+                i.e. pgsql 7.2.1 or other versions etc.
+
+
+          - Build:
+                      python setup.py build
+          - Install: 
+                      python setup.py install
+
+
+      7. Setup the CRON system to run the gpg_keygen_queue system
+
+          - Add CRON job to a user in the group that apache is running as *:
+
+           example:
+
+                Here is my crontab for my APACHE user:
+
+                [apache@bob dc]$ crontab -l
+                # DO NOT EDIT THIS FILE - edit the master and reinstall.
+                # (/tmp/crontab.3074 installed on Mon Mar 25 00:29:31 2002)
+                # (Cron version -- $Id: INSTALL.txt,v 1.1.1.1 2002/06/19 00:15:09 gente_libre Exp $)
+                */1 * * * * /home/websites/distributedcity/utils/gpg_generate_key_queue.py
+                [apache@bob dc]$ 
+
+                What this does is Every Minute runs the:
+               /home/websites/distributedcity/utils/gpg_generate_key_queue.py  Script.
+
+
+
+      8. Fix the Permissions / create missing dirs
+
+          - As ROOT user go to the utility directory and Run the script called fixperms.py
+
+          example:
+                  cd  /home/websites/distributedcity/utils/
+                  ./fixperms.py
+
+
+          - This script basically set all files in site to 770 
+            user:websites
+            group:apache 
+
+            The script also makes sure that the following exist with
+            770 perms:
+
+          - /home/websites/tmp/
+          - /home/websites/tmp/cache/
+
+          - /home/websites/data/
+          - /home/websites/data/gpg_keyrings
+
+
+      9. Restart Apache
+
+      10. Load up your host in your browser, you should see the login page
+
+
+      11. Setup the Crypto_Engine user
+
+	  - Login with username: 'Crypto_Engine' and password: 'password'
+	  - You will be promted to choose a passphrase for the GPG Key
+          - Choose a user image
+          - Once you are in go to Settings->Security and change the
+            password to something more secure for this user
+
+          - You should be in. In a minute or so you should also
+            recieve an email from Crypto_Engine telling you that your key has
+            been generated.
+
+
+          * NOTE: Make sure that the password for the Crypto_Engine
+            user is reflected in your conf/site_config.ini file.  This
+            account is only used for sending "Your key has been
+            generated" notices to users.
+
+
+      12. Setup the Sysop user
+
+	  - Login with username: 'Sysop' and password: 'password'
+	  - You will be promted to choose a passphrase for the GPG Key
+          - Choose a user image
+          - Once you are in go to Settings->Security and change the
+            password to something more secure for this user
+
+	  - This account will be the primary account for moderation at
+            this point until we have implemented a more serious
+            Slashdot/Kuro/Avagoto type moderation system.
+
+          - You should be in. In a minute or so you should also
+            recieve an email from Crypto_Engine telling you that your key has
+            been generated.
+
+
+
+      13. Enjoy.
+

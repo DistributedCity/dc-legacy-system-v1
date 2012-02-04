@@ -1,0 +1,19 @@
+OpenPGP keypair successfully generated.
+
+Greetings,
+
+Your OpenPGP public/private keypair has been successfully generated. You may now receive encrypted messages from other Distributed City users.
+
+To encrypt your Distributed City Private Messages, simply click on the 'Encrypt Message' and/or 'Encrypt Subject' checkboxes from the Messaging Compose form.
+
+The Crypto_Engine (that's me) will automatically retrieve the OpenPGP public key of all the recipients of the message for you, and encrypt your message to them.
+
+When you receive an encrypted message, the messaging system will ask you for your passphrase. Enter it, press 'Decrypt Message', and the Crypto Engine will decrypt the message. You may choose to cache your passphrase for the current session then so that you do not have to repeatedly enter it to read multiple messages.
+
+The Distributed City Crypto_Engine uses GNU Privacy Guard (GPG) to provide its crypto services. GPG is an OpenPGP compliant public key encryption system which is compatible with existing Pretty Good Privacy systems as used in many email and other applications. We have adopted this method of encrypting Private Messages so that in the future, you will also be able to sign messages, files, and other documents with the Distributed City system.
+
+Thank you, and enjoy participating in the Distributed City community.
+
+Regards,
+
+The Crypto_Engine

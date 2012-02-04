@@ -1,0 +1,66 @@
+    <table width="100%" border="0" cellspacing="0" cellpadding="3">
+      <tr>
+	<td colspan="3" class="pageTitle">
+	  Recommendations
+	</td>
+      </tr>
+      <tr>
+	<td colspan="3" class="pagePrompt">
+	  Currently, we are only showing recommended Weblogs, but in the future we will allow recommendations for other items, possibly a specific forum etc...
+	</td>
+      </tr>
+{{section:status_message autohide="yes"}}
+      <tr>
+	<td class="reportCell" colspan="3">
+	  <span class="reportText">{{status_message}}</span>
+	</td>
+      </tr>
+{{/section:status_message}}
+{{section:error_message autohide="yes"}}
+      <tr>
+	<td class="errorCell" colspan="3">
+	  <span class="errorText"><span class="errorLabel">Error:</span> {{error_message}}</span>
+	</td>
+      </tr>
+{{/section:error_message}}
+      <tr>
+	<td align="right" class="colHeaderOff">
+	  &nbsp;
+	</td>
+	<td class="colHeaderOff">
+	  Name
+	</td>
+	<td width="100%" class="colHeaderOff">
+	  &nbsp;
+	</td>
+      </tr>
+{{section:blog_recommendations autohide="yes"}}
+    {{section:blog_recommendation_item autohide="yes"}}
+    <tr>
+      <td align="right" class="listRow">
+	<img src="{{user_image_src}}" alt="" width="12" height="12" border="0">
+      </td>
+      <td class="listRow">
+	<A HREF="/news/weblogs/?uid={{recommended_blog_user_id}}">{{recommended_blog_username}}</a>
+      </td>
+      <td width="100%" class="listRow">
+	<span class="generalButton"><a href="/user/settings/?mode=recommendations&action=remove_blog&blog_id={{recommended_blog_user_id}}">Remove</a></span>
+      </td>
+    </tr>
+    {{/section:blog_recommendation_item}}
+
+    {{section:blog_recommendations_none_row autohide="yes"}}
+    <tr>
+      <td class="listRow" colspan="3">
+	There are no weblogs in your recommended list.
+      </td>
+    </tr>
+    {{/section:blog_recommendations_none_row}}
+
+{{/section:blog_recommendations}}
+    <tr>
+      <td colspan="3" class="buttonRow" align="right">
+	&nbsp; 
+      </td>
+    </tr>
+  </table>

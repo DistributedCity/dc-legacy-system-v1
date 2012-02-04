@@ -1,0 +1,952 @@
+body {
+background-color: #fff;
+font-size: 14px;
+font-family: "Trebuchet MS", Verdana, Lucida, Helvetica, Arial, sans-serif;
+font-color: #033;
+padding: 0px;
+}
+
+p, td, li {
+font-family: "Trebuchet MS", Verdana, Lucida, Helvetica, Arial, sans-serif;
+font-size: 12px;
+}
+
+em {
+font-weight: bold;
+}
+
+/* Because Netscape Navigator 4 does not allow inheritance into tables, and breaks inheritance after tables, rather than simply setting properties on the body and relying on inheritance, we explicitly set the properties using a selector group. */
+
+h1, h2, h3, h4, h5, h6 {}
+
+h1 {}
+
+h2 {}
+
+h3 {}
+
+h4 {}
+
+h5 {}
+
+h6 {}
+
+p {
+font-size: 12px;
+line-height: 1.25;
+}
+
+a.tabMenuOff:link {
+color: #033;
+text-decoration: none;
+font-size: 11px;
+}
+
+a.tabMenuOff:visited {
+color: #033;
+text-decoration: none;
+font-size: 11px;
+}
+
+a.tabMenuOff:hover {
+color: #366;
+font-size: 11px;
+text-decoration: underline;
+}
+
+a.tabMenuOff:active {
+color: #9AA;
+text-decoration: underline;
+font-size: 11px;
+}
+
+a.tabMenuOn:link {
+color: #033;
+text-decoration: none;
+font-size: 11px;
+}
+
+a.tabMenuOn:visited {
+color: #033;
+text-decoration: none;
+font-size: 11px;
+}
+
+a.tabMenuOn:hover {
+color: #366;
+font-size: 11px;
+text-decoration: underline;
+}
+
+a.tabMenuOn:active {
+color: #9AA;
+text-decoration: underline;
+font-size: 11px;
+}
+
+a:link {
+color: #036;
+text-decoration: none;
+font-size: 100%;
+}
+
+a:visited {
+color: #066;
+text-decoration: none;
+font-size: 100%;
+}
+
+a:hover {
+color: #369;
+font-size: 100%;
+text-decoration: underline;
+}
+
+a:active {
+color: #9AA;
+text-decoration: underline;
+font-size: 100%;
+}
+
+/* for links in user content */
+a.aUser {
+text-decoration: underline;
+};
+
+/* general styles */
+
+.nowrap {
+white-space: no-wrap;
+}
+
+.tableColumnLabel {
+font-family: "Trebuchet MS", Verdana, Lucida, Helvetica, Arial, sans-serif;
+font-size: 11px;
+background-color: #DDDDDD;
+color: #033;
+font-weight: bold;
+text-align: center;
+}
+
+.tableRowLabel {
+font-family: "Trebuchet MS", Verdana, Lucida, Helvetica, Arial, sans-serif;
+font-size: 11px;
+background-color: #DDDDDD;
+color: #033;
+font-weight: bold;
+text-align: center;
+}
+
+
+td.content {
+padding: 10px;
+}
+
+td.rightBlockHeader {
+padding: 3px;
+border-bottom: 1px #999 inset;
+background-image: url(/images/master/subTableHeaderRight.gif);
+font-family: "Trebuchet MS", Verdana, Helvetica, Arial, sans-serif;
+font-size: 10px;
+font-weight: bold;
+background-repeat: no-repeat;
+background-position: left top;
+}
+
+td.rightBlockContent {
+border-left: 1px #999 solid;
+padding: 3px;
+font-family: Verdana, Helvetica, Arial, sans-serif;
+font-size: 10px;
+line-height: 1;
+}
+
+td.rightBlockDivider {
+border-left: 1px #999 solid;
+border-bottom: 1px #999 inset;
+border-top: 1px #999 inset;
+padding: 3px;
+font-family: "Trebuchet MS", Verdana, Helvetica, Arial, sans-serif;
+font-size: 10px;
+font-weight: bold;
+line-height: 1;
+background-image: url(/images/master/bgLightGreenLines.gif);
+}
+
+td.rightBlockFooter {
+background-image: url(/images/master/roundedBottomLeft.gif);
+background-position: top left;
+}
+
+td.leftBlockHeader {
+padding: 3px;
+border-bottom: 1px #999 inset;
+background-image: url(/images/master/subTableHeaderLeft.gif);
+font-family: "Trebuchet MS", Verdana, Helvetica, Arial, sans-serif;
+font-size: 11px;
+font-weight: bold;
+background-repeat: no-repeat;
+background-position: right top;
+}
+
+td.leftBlockContent {
+border-right: 1px #999 solid;
+padding: 3px;
+font-family: Verdana, Helvetica, Arial, sans-serif;
+line-height: 1;
+}
+
+td.leftBlockDivider {
+border-right: 1px #999 solid;
+border-bottom: 1px #999 inset;
+border-top: 1px #999 inset;
+padding: 3px;
+font-family: Verdana, Helvetica, Arial, sans-serif;
+font-size: 10px;
+font-weight: bold;
+line-height: 1;
+background-image: url(/images/master/bgLightGreenLines.gif);
+}
+
+td.leftBlockFooter {
+background-image: url(/images/master/roundedBottomRight.gif);
+background-position: top right;
+}
+
+td.pageFooterMid {
+background-image: url(/images/master/roundedBottomBG.gif);
+background-position: top left;
+background-repeat: repeat-x;
+}
+
+td.pageFooterLeft {
+background-image: url(/images/master/roundedBottomLeft.gif);
+background-position: top left;
+background-repeat: no-repeat;
+}
+
+td.pageFooterRight {
+background-image: url(/images/master/roundedBottomRight.gif);
+background-position: top right;
+background-repeat: no-repeat;
+}
+
+img {}
+
+td.sidebarLeft {
+border-left: 1px #999 solid;
+}
+
+td.tabSpacer {
+border-left: 1px #999999 solid;
+border-bottom: 1px #698969 inset;
+background-image: url(/images/master/bgLightGreenLines.gif);
+background-repeat: repeat;
+text-align: left;
+}
+
+td.sidebarRight {
+border-right: 1px #999 solid;
+}
+
+/* general content styles */
+
+.subHeader {
+font-size: 14px;
+font-style: bold;
+}
+
+td.pageTitle {
+color: #033;
+font-family: "Trebuchet MS", Verdana, Lucida, Helvetica, Arial, sans-serif;
+font-size: 16px;
+font-weight: bold;
+border-bottom: 1px #698969 inset;
+}
+
+td.pagePrompt {
+color: #033;
+font-family: "Trebuchet MS", Verdana, Lucida, Helvetica, Arial, sans-serif;
+font-size: 12px;
+border-bottom: 1px #698969 inset;
+line-height: 1;
+}
+
+.tipText {
+color: #666;
+font-family: "Trebuchet MS", Verdana, Lucida, Helvetica, Arial, sans-serif;
+font-size: 12px;
+line-height: 1;
+}
+
+.generalHeader {
+color: #033;
+font-family: "Trebuchet MS", Verdana, Lucida, Helvetica, Arial, sans-serif;
+font-size: 15px;
+font-weight: bold;
+border-bottom: 1px #698969 inset;
+}
+
+.generalSubHeader {
+color: #033;
+font-family: "Trebuchet MS", Verdana, Lucida, Helvetica, Arial, sans-serif;
+font-size: 14px;
+font-weight: bold;
+}
+
+/* button styles */
+
+.formButton {
+font-size: 12px;
+font-family: Verdana, Lucida, Helvetica, Arial, sans-serif;
+color: #033;
+font-weight: bold;
+background-color: white;
+}
+
+.logoutButton {
+font-size: 10px;
+font-family: Verdana, Lucida, Helvetica, Arial, sans-serif;
+background-color: white;
+border-style: outset;
+border: 1px #8CA3A3 solid;
+padding-left: 2px;
+padding-right: 2px;
+}
+
+.generalButton {font-weight: bold;
+text-align: center;
+margin-bottom: 3px;
+margin-top: 3px;}
+
+.generalButton a {padding: 2px;
+background-color: #d4eeaf;
+font-weight: bold;
+text-decoration: none;
+width: 98%;
+color: #4f5942;
+border-top: 1px #edf8de solid;
+border-left: 1px #edf8de solid;
+border-bottom: 1px #727f5e solid;
+border-right: 1px #727f5e solid;
+display: inline;}
+
+.generalButton a:hover {border-top: 1px #727f5e solid;
+border-left: 1px #727f5e solid;
+border-bottom: 1px #edf8de solid;
+border-right: 1px #edf8de solid;
+background-color: #abbf8e;}
+
+.postButton {
+background-color : #EFEFEF;
+color : #000000;
+font-size: 10px; font-family: Andale Mono, Courier, Monaco, monospace;
+}
+
+.helpline { background-color: #DEE3E7; border-style: none; }
+
+/* error and report styles */
+
+.errorCell {
+background-image: url(/images/master/bgLightRed.gif);
+border-bottom: 1px #698969 inset;
+}
+
+.errorText {
+font-size: 12px;
+font-family: "Trebuchet MS", Verdana, Lucida, Helvetica, Arial, sans-serif;
+color: #900;
+}
+
+.errorLabel {
+font-weight: bold;
+}
+
+.reportCell {
+background-image: url(/images/master/bgBlueLines.gif);
+border-bottom: 1px #698969 inset;
+}
+
+.reportCellSolo {
+background-image: url(/images/master/bgBlueLines.gif);
+border-top: 1px #698969 inset;
+border-bottom: 1px #698969 inset;
+}
+
+.reportText {
+font-size: 12px;
+font-family: "Trebuchet MS", Verdana, Lucida, Helvetica, Arial, sans-serif;
+color: #003;
+}
+
+.reportLabel {
+font-weight: bold;
+}
+
+/* form styles */
+
+.formText {
+font-family: Verdana, Lucida, Helvetica, Arial, sans-serif;
+font-size: 12px;
+font-color: #033;
+}
+
+.formTextArea {
+font-family: Verdana, Lucida, Helvetica, Arial, sans-serif;
+font-size: 12px;
+font-color: #033;
+}
+
+.optionText {
+font-family: Verdana, Lucida, Helvetica, Arial, sans-serif;
+font-size: 12px;
+font-color: #033;
+}
+
+.formHeader {
+font-family: "Trebuchet MS", Verdana, Lucida, Helvetica, Arial, sans-serif;
+font-size: 12px;
+background-color: #EEE;
+border: 1px #999 solid;
+}
+
+.buttonRow {
+font-family: "Trebuchet MS", Verdana, Lucida, Helvetica, Arial, sans-serif;
+font-size: 12px;
+color: #033;
+background-color: #EEE;
+border: 1px #999 solid;
+}
+
+.buttonRow input {
+font-size: 12px;
+font-family: Verdana, Lucida, Helvetica, Arial, sans-serif;
+color: #033;
+font-weight: bold;
+background-color: white;
+}
+
+td.formRow {
+border-top: 1px #EEE solid;
+font-family: "Trebuchet MS", Verdana, Lucida, Helvetica, Arial, sans-serif;
+font-size: 12px;
+}
+
+.formFieldValue {}
+
+.formFieldLabel {
+font-size: 12px;
+font-weight: bold;
+}
+
+/* news content styles */
+
+td.newsItemTitle {
+color: #033;
+background: #EEE;
+font-family: "Trebuchet MS", Verdana, Lucida, Helvetica, Arial, sans-serif;
+font-size: 16px;
+font-weight: bold;
+border-bottom: 1px #698969 inset;
+border-top: 1px #698969 inset;
+}
+
+td.newsItemSubtitle {
+border-bottom: 1px #698969 inset;
+}
+
+.newsItemSubtitleText {
+color: #666;
+font-family: "Trebuchet MS", Verdana, Lucida, Helvetica, Arial, sans-serif;
+font-size: 12px;
+}
+
+td.newsItemContent {
+color: #033;
+font-family: "Trebuchet MS", Verdana, Lucida, Helvetica, Arial, sans-serif;
+font-size: 12px;
+border-bottom: 1px #698969 inset;
+}
+
+td.newsItemFooter {
+color: #033;
+font-family: "Trebuchet MS", Verdana, Lucida, Helvetica, Arial, sans-serif;
+font-size: 12px;
+}
+
+td.adminFooter { 
+color: #600; 
+font-family: "Trebuchet MS", Verdana, Lucida, Helvetica, Arial, sans-serif; 
+font-size: 12px;
+background-color: #EEE;
+border-top: 1px #999 solid;
+border-bottom: 1px #999 solid;
+} 
+
+.readMoreLink {
+color: #033;
+font-family: "Trebuchet MS", Verdana, Lucida, Helvetica, Arial, sans-serif;
+font-size: 12px;
+font-weight: bold;
+font-style: italic;
+}
+
+.pageCount {
+color: #033;
+font-family: "Trebuchet MS", Verdana, Lucida, Helvetica, Arial, sans-serif;
+font-size: 12px;
+}
+
+.postCount {
+color: #666;
+font-family: "Trebuchet MS", Verdana, Lucida, Helvetica, Arial, sans-serif;
+font-size: 12px;
+}
+
+td.submitStatusBar { 
+color: #600;  
+font-family: "Trebuchet MS", Verdana, Lucida, Helvetica, Arial, sans-serif;  
+font-size: 12px; 
+background-color: #EEE; 
+border-top: 1px #999 solid; 
+border-bottom: 1px #999 solid; 
+} 
+
+td.articleReplyRow {
+background-color: #EEE;
+border-top: 1px #999 solid; 
+border-bottom: 1px #999 solid; 
+}
+
+td.commentTitleTableRow {
+background-color: #EEE;
+border-bottom: 1px #698969 inset;
+border-top: 1px #698969 inset;
+}
+
+td.commentTitle {
+color: #033;
+font-family: "Trebuchet MS", Verdana, Lucida, Helvetica, Arial, sans-serif;
+font-size: 14px;
+font-weight: bold;
+}
+
+td.commentAuthor {
+font-family: "Trebuchet MS", Verdana, Lucida, Helvetica, Arial, sans-serif;
+color: #666;
+font-size: 12px;
+}
+}
+
+td.commentContent {
+font-family: "Trebuchet MS", Verdana, Lucida, Helvetica, Arial, sans-serif;
+color: #666;
+font-size: 12px;
+}
+
+td.commentFooter {
+border-top: 1px #698969 inset;
+}
+
+/* sidebar menu styles */
+
+td.menuBlockHeader {
+padding: 3px;
+border-bottom: 1px #999 solid;
+background-image: url(/images/master/subTableHeaderLeft.gif);
+font-family: "Trebuchet MS", Verdana, Helvetica, Arial, sans-serif;
+font-size: 11px;
+font-weight: bold;
+background-repeat: no-repeat;
+background-position: right top;
+}
+
+td.menuTableContainer {
+padding: 0px;
+}
+
+td.menuOn {
+background-image: url(/images/master/menuButtonBG1.gif);
+background-repeat: repeat;
+font-family: Verdana, Lucida, Helvetica, Arial, sans-serif;
+font-size: 10px;
+color: #699;
+font-weight: bold;
+text-align: left;
+border-right: 1px #999 solid;
+border-bottom: 1px #CCC solid;
+}
+
+td.menuOff {
+background-image: url(/images/master/menuButtonBG1.gif);
+background-repeat: repeat;
+font-family: Verdana, Lucida, Helvetica, Arial, sans-serif;
+font-size: 10px;
+color: #033;
+font-weight: bold;
+text-align: left;
+border-right: 1px #999 solid;
+border-bottom: 1px #CCC solid;
+}
+
+/* sidebar list styles */
+
+td.sidebarListCellLeft {
+font-family: Verdana, Lucida, Helvetica, Arial, sans-serif;
+font-size: 10px;
+color: #033;
+border-right: 1px #999 solid;
+border-bottom: 1px #CCC inset;
+}
+
+/* tab menu styles */
+
+td.tabOn {
+border-top: 1px #698969 solid;
+border-left: 1px #777777 inset;
+background-color: #fff;
+font-size: 11px;
+color: #699;
+font-weight: bold;
+text-align: center;
+padding-top: 0px;
+padding-left: 5px;
+padding-right: 5px;
+padding-bottom: 0px;
+}
+
+td.tabOnRight {
+border-left: 1px #698969 inset;
+border-right: 1px #999 solid;
+background-color: #fff;
+font-family: "Trebuchet MS", Verdana, Lucida, Helvetica, Arial, sans-serif;
+font-size: 11px;
+color: #699;
+font-weight: bold;
+text-align: center;
+padding-top: 3px;
+padding-left: 5px;
+padding-bottom: 3px;
+padding-right: 5px;
+}
+
+td.tabOffRight {
+border-left: 1px #999 solid;
+border-right: 1px #999 solid;
+border-bottom: 1px #698969 inset;
+background-image: url(/images/master/bgLightGreenLines.gif);
+background-repeat: repeat;
+font-family: "Trebuchet MS", Verdana, Lucida, Helvetica, Arial, sans-serif;
+font-size: 11px;
+color: #033;
+font-weight: bold;
+text-align: center;
+padding-top: 3px;
+padding-left: 5px;
+padding-bottom: 3px;
+padding-right: 5px;
+}
+
+td.tabOffGreyNone {
+border-left: 1px #999999 solid;
+border-bottom: 1px #698969 inset;
+background-image: url(/images/master/bgLightGreenLines.gif);
+background-repeat: repeat;
+font-family: "Trebuchet MS", Verdana, Lucida, Helvetica, Arial, sans-serif;
+font-size: 11px;
+color: #033;
+font-weight: bold;
+text-align: center;
+padding-top: 3px;
+padding-left: 5px;
+padding-bottom: 3px;
+padding-right: 5px;
+}
+
+td.tabOffNoneGrey {
+border-left: 1px #999999 solid;
+border-bottom: 1px #698969 inset;
+background-image: url(/images/master/bgLightGreenLines.gif);
+background-repeat: repeat;
+font-family: "Trebuchet MS", Verdana, Lucida, Helvetica, Arial, sans-serif;
+font-size: 11px;
+color: #033;
+font-weight: bold;
+text-align: center;
+padding-top: 3px;
+padding-left: 5px;
+padding-bottom: 3px;
+padding-right: 5px;
+}
+
+td.headerLeft {
+border-bottom: 1px inset #698969;
+background-image: url(/images/master/headerBackground.gif);
+margin: 0px;
+text-align: left;
+}
+
+td.headerRight {
+background-image: url(/images/master/headerBackground.gif);
+border-bottom: 1px #698969 inset;
+text-align: right;
+}
+
+
+/* sub tab menu styles */
+
+td.subTabSpacer {
+background-image: url(/images/master/bgLightGreenLines.gif);
+border-bottom: 1px #698969 inset;
+}
+
+td.subTabLeftOn {
+background-image: url(/images/master/subTabLeftOn.gif);
+font-family: "Trebuchet MS", Verdana, Lucida, Helvetica, Arial, sans-serif;
+font-size: 11px;
+color: #699;
+font-weight: bold;
+text-align: center;
+}
+
+td.subTabLeftOff {
+background-image: url(/images/master/subTabLeftOff.gif);
+font-family: "Trebuchet MS", Verdana, Lucida, Helvetica, Arial, sans-serif;
+font-size: 11px;
+color: #033;
+font-weight: bold;
+text-align: center;
+border-bottom: 1px #698969 inset;
+}
+
+td.subTabMidOn {
+background-image: url(/images/master/subTabMidOn.gif);
+font-family: "Trebuchet MS", Verdana, Lucida, Helvetica, Arial, sans-serif;
+font-size: 11px;
+color: #699;
+font-weight: bold;
+text-align: center;
+}
+
+td.subTabMidOff {
+background-image: url(/images/master/subTabMidOff.gif);
+font-family: "Trebuchet MS", Verdana, Lucida, Helvetica, Arial, sans-serif;
+font-size: 11px;
+color: #033;
+font-weight: bold;
+text-align: center;
+border-bottom: 1px #698969 inset;
+}
+
+td.subTabRight {
+background-image: url(/images/master/subTabRight.gif);
+border-bottom: 1px #698969 inset;
+}
+
+
+/* web chat styles */
+
+td.chatHeaderLeft {
+background-image: url(/images/master/headerBackground.gif);
+border-bottom: 1px #698969 inset;
+vertical-align: middle;
+text-align: left;
+}
+
+td.chatHeaderRight {
+background-image: url(/images/master/headerBackground.gif);
+border-bottom: 1px #698969 inset;
+text-align: right;
+vertical-align: middle;
+}
+
+td.chatRowUser {
+border-bottom: 1px #EEE solid;
+font-family: "Trebuchet MS", Verdana, Lucida, Helvetica, Arial, sans-serif;
+font-size: 12px;
+font-weight: bold;
+font-color: #033;
+}
+
+td.chatRowMessage {
+border-bottom: 1px #EEE solid;
+font-size: 12px;
+font-family: "Trebuchet MS", Verdana, Lucida, Helvetica, Arial, sans-serif;
+font-color: #033;
+}
+
+td.chatRowTime {
+border-bottom: 1px #EEE solid;
+font-size: 12px;
+font-family: "Trebuchet MS", Verdana, Lucida, Helvetica, Arial, sans-serif;
+font-color: #666;
+}
+
+td.messageBox {
+border-top: 1px #698969 inset; 
+vertical-align: middle; 
+text-align: left;
+font-size: 12px;
+font-family: "Trebuchet MS", Verdana, Lucida, Helvetica, Arial, sans-serif;
+font-weight: bold;
+font-color: #033;
+}
+
+/* list styles */
+
+.colHeaderOn {  
+font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px;
+font-style: italic;
+font-weight: bold;
+background-image: url(/images/master/bgLightGreenLines.gif); 
+border-top: 1px #eee solid;
+}
+
+.colHeaderOff { 
+font-family: Verdana, Arial, Helvetica, sans-serif;
+font-size: 10px; 
+font-style: italic; 
+background-image: url(/images/master/bgLightGreenLines.gif); 
+border-top: 1px #eee solid;
+}
+
+.listRow {
+font-family: Verdana, Arial, Helvetica, sans-serif;
+font-size: 11px; 
+border-top: 1px #eee solid;
+}
+
+/* forum styles */
+
+td.locationBarCell {
+font-family: "Trebuchet MS", Verdana, Lucida, Helvetica, Arial, sans-serif; 
+font-weight: bold;
+font-size: 16px;
+border-top: 1px #698969 inset;
+border-bottom: 1px #698969 inset;
+}
+
+td.forumListHeader {
+font-family: "Trebuchet MS", Verdana, Lucida, Helvetica, Arial, sans-serif; 
+font-weight: bold;
+font-size: 16px;
+border-bottom: 1px #698969 inset;
+}
+
+td.forumListColHeader {
+font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px;
+background-color: #eee;
+border-bottom: 1px #698969 inset;
+}
+
+td.forumListRow {
+font-family: Verdana, Arial, Helvetica, sans-serif;
+font-size: 11px; 
+border-top: 1px #eee solid;
+border-left: 1px #eee solid;
+}
+
+td.forumListRowRight {
+background-color: #f5f5f5;
+font-family: Verdana, Arial, Helvetica, sans-serif;
+font-size: 11px; 
+border-top: 1px #eee solid;
+border-left: 1px #eee solid;
+border-right: 1px #eee solid;
+}
+
+td.forumListRowGrey {
+font-family: Verdana, Arial, Helvetica, sans-serif;
+font-size: 11px; 
+border-top: 1px #eee solid;
+border-left: 1px #eee solid;
+background-color: #f5f5f5;
+}
+ 
+td.forumListFooter {
+font-family: "Trebuchet MS", Verdana, Lucida, Helvetica, Arial, sans-serif;
+font-size: 12px;
+color: #033;
+background-color: #EEE;
+border: 1px #999 solid;
+}
+
+.forumListFooter input {
+font-size: 12px;
+font-family: Verdana, Lucida, Helvetica, Arial, sans-serif;
+color: #033;
+font-weight: bold;
+background-color: white;
+}
+
+.forumName {
+font-weight: bold;
+}
+
+.forumDescription {
+font-color: #666;
+font-size: 12px;
+}
+
+td.topicSubjectCell {
+font-size: 14px;
+font-weight: bold;
+}
+
+td.topicTitleRow {
+background-color: #eee;
+border-bottom: 1px #698969 inset;
+}
+
+
+td.topicBylineCell {
+font-size: 14px;
+}
+
+td.topicContentCell {
+padding-top: 8px;
+padding-bottom: 15px;
+border-bottom: 1px #698969 inset;
+font-size: 12px;
+}
+
+td.topicContentFooter {
+font-size: 12px;
+}
+
+.topicByline {
+color: #666;
+font-size: 12px;
+}
+
+td.topicReplyRow {
+background-color: #EEE;
+border-top: 1px #999 solid; 
+border-bottom: 1px #999 solid; 
+}
+
+.quote {
+font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; color: #444444;
+background-color: #FAFAFA; border: #D1D1D1; border-style: solid;
+border-left-width: 1px; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px;
+display: block;
+}
+
+.quote + br {
+font-size: 0px;
+}
+
+
+/* recent weblog sidebar styles */
+
+recentWeblogUsername {
+font-size: 10px;
+font-weight: bold;
+}
+
+recentWeblogSubject {
+font-size: 10px;
+font-style: italic;
+}
+
+

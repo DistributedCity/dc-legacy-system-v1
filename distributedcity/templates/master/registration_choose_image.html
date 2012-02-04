@@ -1,0 +1,103 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" 
+        "http://www.w3.org/TR/1998/REC-html40-19980424/loose.dtd"> 
+ 
+<html> 
+  <head> 
+    <title>Distributed City: Choose OpenPGP passphrase</title>  
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+    <link rel="stylesheet" href="/dcStyles.css" type="text/css"> 
+    <link REL="SHORTCUT ICON" href="/favicon.ico"> 
+  </head> 
+  <body text="#003333"> 
+    <FORM ACTION="?action=registration_gpg&SID={{sid}}" METHOD="POST">
+      <TABLE WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+	  <TR>
+	    <TD>
+	      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+		  <tr>
+		    <td class="headerLeft"><img src="/images/master/loginHeaderLeft.gif" width="341" height="39"></td>
+		    <td class="headerRight"><img src="/images/master/keyHeaderRight.gif" width="84" height="39"></td>
+		  </tr>
+	      </table>
+	    </TD>
+	  </TR>
+	  <TR>
+	    <TD>
+	      <table width="100%" border="0" cellspacing="0" cellpadding="3">
+		  <tr>
+		    <td class="pageTitle">
+		      Step 3 of 3: Choose your Nym Image
+		    </td>
+		  </tr>
+		  <tr>
+		    <td class="pagePrompt">
+		      <p>
+			Below are displayed an array of possible images for your Nym. Click on a image to specify it as your Nym image.The Nym image you choose will be associated with you - it will be displayed next to your posts, your new and weblog articles, and in your profile. Use the tabs to navigate through the sets of images.
+		      </p>
+		    </td>
+		  </tr>
+	      </table>
+	      <table width="100%" border="0" cellspacing="0" cellpadding="3">
+		  <tr>
+		    <td width="100%" class="subTabSpacer">
+		      &nbsp;
+		    </td>
+		    <td class="subTabLeftOn">
+		      &nbsp;Zeldman&nbsp;1
+		    </td>
+		    <td class="subTabMidOff">
+		      &nbsp;<a href="Keyring%20Link">Zeldman&nbsp;2</a>&nbsp;
+		    </td>
+		    <td class="subTabMidOff">
+		      &nbsp;<a href="Encrypt%20Decrypt%20Link">Zeldman&nbsp;3</a>
+		    </td>
+		    <td class="subTabMidOff">
+		      &nbsp;<a href="Encrypt%20Decrypt%20Link">Zeldman&nbsp;4</a>
+		    </td>
+		    <td class="subTabMidOff">
+		      <a href="Encrypt%20Decrypt%20Link">Zeldman&nbsp;5</a>
+		    </td>
+		    <td class="subTabMidOff">
+		      <a href="Encrypt%20Decrypt%20Link">Ellison&nbsp;1</a>
+		    </td>
+		    <td class="subTabMidOff">
+		      &nbsp;<a href="Encrypt%20Decrypt%20Link">Misc&nbsp;1</a>&nbsp;
+		    </td>
+		    <td class="subTabRight">
+		      &nbsp;
+		    </td>
+		  </tr>
+	      </table>
+	      <table width="100%" border="0" cellspacing="0" cellpadding="5">
+		  <tr align="center">
+
+		    {{section:settings_image_row}}
+		    <td>
+		      <a href="/user/settings/?mode=general&action=change_avatar&new_avatar={{icon}}"><img src="{{avatar_src}}" width="32" height="32"></a>
+		    </td>
+		    {{/section:settings_image_row}}
+
+
+		    {{section:registration_image_row}}
+		    <td>
+		      <a href="/user/settings/?mode=general&action=change_avatar&new_avatar={{icon}}"><img src="{{avatar_src}}" width="32" height="32"></a>
+		    </td>
+		    {{/section:registration_image_row}}
+
+
+
+		  <tr align="center">
+		    <td colspan="{{tableCols}}" class="buttonRow">
+		      &nbsp;
+		    </td>
+		  </tr>
+	      </table>
+	    </td>
+	  </tr>
+      </table>
+    </TD>
+    </TR>
+    </TABLE>
+    </form>
+  </body>
+</html>

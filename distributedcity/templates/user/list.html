@@ -1,0 +1,50 @@
+<table width="100%" border="0" cellspacing="0" cellpadding="3">
+      <tr>
+	<td class="newsItemTitle" colspan="5">
+	  Search Results
+	  </td>
+	</tr>
+      <tr>
+	<td class="pagePrompt" colspan="5">
+	  The users below matched your search criteria. If your search returned no results, try using fewer search parameters.
+	</td>
+      </tr>
+{{section:error_message autohide="yes"}}
+      <tr>
+	<td class="errorCell" colspan="5">
+	  <span class="errorText"><span class="errorLabel">Error:</span> {{error_message}}</span>
+	</td>
+      </tr>
+{{/section:error_message}}
+{{section:profile_directory_items}} 
+     <tr>
+	<td class="formRow" width="20%">
+	  <a href="/search/?profile={{profile_user_id1}}">{{profile_username1}}</a>
+	</td>
+	<td class="formRow" width="20%">
+	  <a href="/search/?profile={{profile_user_id2}}">{{profile_username2}}</a>
+	</td>
+	<td class="formRow" width="20%">
+	  <a href="/search/?profile={{profile_user_id3}}">{{profile_username3}}</a>
+	</td>
+	<td class="formRow" width="20%">
+	  <a href="/search/?profile={{profile_user_id4}}">{{profile_username4}}</a>
+	</td>
+	<td class="formRow" width="20%">
+	  <a href="/search/?profile={{profile_user_id5}}">{{profile_username5}}</a>
+	</td>
+      </tr>
+{{/section:profile_directory_items}}
+{{section:profile_directory_none_row}}
+    <tr>
+      <td class="formRow" colspan="5">
+	Your search returned no results.
+      </td>
+    </tr>
+{{/section:profile_directory_none_row}}
+      <tr>
+	<td class="buttonRow" colspan="5">
+	  &nbsp;
+      </td>
+    </tr>
+</table>

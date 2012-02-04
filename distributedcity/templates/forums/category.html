@@ -1,0 +1,63 @@
+{{location_bar}}
+{{section:status_message autohide="yes"}}
+    <table width="100%" border="0" cellspacing="0" cellpadding="3">
+      <tr>
+	<td class="reportCell">
+	  {{status_message}}
+	</td>
+      </tr>
+    </table>
+{{/section:status_message}}
+
+<table width="100%" border="0" cellspacing="0" cellpadding="3">
+
+{{section:category_name_solo}}
+    <tr align="left">
+    <td colspan="4">
+     <table width="100%" border="0" cellspacing="0" cellpadding="0" align="left">
+      <tr>
+       <td width="75">
+        <a href="/forums/?action=category_overview&category_id={{category_id}}"><img src="/images/topics/{{category_icon}}.gif" border="0" width="64" height="64" align="left" hspace="3">
+       </td>
+       <td class="forumListHeader">
+	    {{section:cat_name}}<a href="/forums/?action=category_overview&category_id={{category_id}}">{{category_name}}</a><br>{{/section:cat_name}}
+	    <span class="forumDescription">{{category_description}}</span>
+       </td>
+       </tr>
+      </table>
+     </td>
+    </tr>
+{{/section:category_name_solo}}
+
+        <tr>
+          <td class="forumListColHeader">&nbsp;</td>
+          <td width="100%" class="forumListColHeader">Forum</td>
+          <td class="forumListColHeader">Threads</td>
+          <td class="forumListColHeader">Posts</td>
+        </tr>
+{{section:forum autohide="yes"}}
+        <tr>
+          <td class="forumListRowGrey"><img src="/images/forum/forumIconStandard.gif" border="0" width="24" height="24" alt=""></td>
+          <td align="left" class="forumListRow">
+	<a href="/forums/?action=forum&forum_id={{forum_id}}"><span class="forumName">{{forum_name}}</span></a><br><span class="forumDescription">{{forum_description}}</span>
+	  </td>
+          <td align="center" class="forumListRowGrey">
+	  {{forum_topic_count}}
+	  </td>
+          <td align="center" class="forumListRowRight">
+	  {{forum_post_count}}
+	  </td>
+        </tr>
+{{/section:forum}}
+    <tr>
+      <td class="forumListFooter" colspan="4">
+	&nbsp;
+      </td>
+    </tr>
+    <tr>
+      <td colspan="4">
+	  <br><br><br>
+      </td>
+    </tr>
+    
+  </table>

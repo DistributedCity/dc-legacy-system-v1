@@ -1,0 +1,64 @@
+    <table width="100%" border="0" cellspacing="0" cellpadding="3" class="pageTitle">
+      <tr>
+	<td class="pageTitle">Compose Private Message</td>
+      </tr>
+      <tr>
+	<td class="pagePrompt">Enter your message and recipients below. If you wish to encrypt this message, make sure you select the appropriate checkboxes.</td>
+      </tr>
+      <tr>
+{{section:compose_error autohide="yes"}}
+    <tr>
+      <td class="errorCell"><span class="errorLabel">Error:</span>&nbsp;{{error_message}}
+      </td>
+    </tr>
+{{/section:compose_error}}
+    <td>
+      <form action="/messaging/?SID={{sid}}" method="post">
+	<input type="hidden" name="action" value="send">
+	  <table width="100%" border="0" cellspacing="0" cellpadding="3">
+	    <tr>
+	      <td colspan="2" class="formHeader">Compose your message below:</td>
+	    </tr>
+	    <tr>
+	      <td class="formRow" align="right"><span class="formFieldLabel">From:</span></td>
+	      <td width="100%" class="formRow"><span class="formFieldValue">{{username}}</span></td>
+	    </tr>
+	    <tr>
+	      <td class="formRow" align="right"><span class="formFieldLabel">To:</span></td>
+	      <td class="formRow">
+		<input type="text" name="new_message_to" size="60" value="{{new_message_to}}" style="font-family: Verdana, Helvetica, Lucida, Arial, sans-serif; font-size: 12px; color: #033;">
+	      </td>
+	    </tr>
+	    <tr>
+	      <td class="formRow" align="right"><span class="formFieldLabel">Subject:</span></td>
+	      <td class="formRow">
+		<input type="text" name="new_message_subject" size="60" value="{{subject}}" style="font-family: Verdana, Helvetica, Lucida, Arial, sans-serif; font-size: 12px; color: #033;">
+	      </td>
+	    </tr>
+	    <tr>
+	      <td class="formRow" align="right" valign="top"><span class="formFieldLabel">Message:</span></td>
+	      <td class="formRow">
+		<textarea name="new_message_body" cols="60" rows="6" style="font-family: Verdana, Helvetica, Lucida, Arial, sans-serif; font-size: 12px; color: #033;">{{body}}</textarea>
+	      </td>
+	    </tr>
+	    <tr>
+	      <td class="formRow" align="right"><span class="formFieldLabel">Encryption&nbsp;Options:</span></td>
+	      <td class="formRow">
+		<input type="checkbox" name="encrypt_message" {{encrypt_body_checked_flag}}>
+		<span class="formFieldValue">Encrypt Message&nbsp;&nbsp;
+		<input type="checkbox" name="encrypt_subject" {{encrypt_subject_checked_flag}}>
+		Encrypt Subject</span></td>
+	    </tr>
+	    <tr align="right">
+	      <td colspan="2" class="buttonRow">
+		<input type="submit" value="Cancel">
+		<input type="submit" name="preview" value="Preview Message">
+	      </td>
+	    </tr>
+	  </table>
+	</td>
+      </tr>
+      <tr>
+	<td>&nbsp;</td>
+      </tr>
+    </table>

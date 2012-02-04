@@ -1,0 +1,114 @@
+<table width="100%" border="0" cellspacing="0" cellpadding="3">
+
+{{section:recentThreads}}
+ {{section:title_message autohide="yes"}}
+ <tr>
+  <td colspan="5" align="left" class="forumListHeader">Recently Started Threads</td>
+ </tr>
+ {{/section:title_message}}
+ <tr>
+  <td class="forumListColHeader" width="100%" colspan="2">Subject</td>
+  <td class="forumListColHeader">Category</td>
+  <td class="forumListColHeader">Author</td>
+  <td class="forumListColHeader">Age</td>
+ </tr>
+
+
+ {{section:status_message autohide="yes"}}
+ <tr>
+  <td colspan="5" align="left" class="forumListRowGrey">{{threads_status_message}}</td>
+ </tr>
+ {{/section:status_message}}
+
+
+ {{section:threads autohide="yes"}}
+ <tr>
+  <td align="left" class="forumListRow" colspan="2"><a href="/forums/?action=topic&topic_id={{threads_thread_id}}">{{threads_thread_subject}}</a></td>
+  <td align="left" class="forumListRow"><nobr>{{threads_thread_category}}</nobr></td>
+  <td align="center" class="forumListRowGrey"><nobr><a href="/search/?profile={{threads_thread_poster_user_id}}">{{threads_thread_poster_username}}</a></nobr></td>
+  <td align="center" class="forumListRow" align="right"><nobr>{{threads_thread_date}}</nobr></td>
+ </tr>
+ {{/section:threads}}
+ <tr>
+  <td><br>
+   <br>
+  </td>
+ </tr>
+{{/section:recentThreads}}
+
+
+{{section:recentReplies}}
+ {{section:title_message autohide="yes"}}
+ <tr>
+  <td colspan="5" align="left" class="forumListHeader">Recent Replies To My Posts</td>
+ </tr>
+ {{/section:title_message}}
+ <tr>
+  <td class="forumListColHeader" width="100%" colspan="2">Subject</td>
+  <td class="forumListColHeader">Category</td>
+  <td class="forumListColHeader">Author</td>
+  <td class="forumListColHeader">Age</td>
+ </tr>
+
+
+ {{section:status_message autohide="yes"}}
+ <tr>
+  <td colspan="5" align="left" class="forumListRowGrey">{{replies_status_message}}</td>
+ </tr>
+ {{/section:status_message}}
+
+
+ {{section:threads autohide="yes"}}
+ <tr>
+  <td align="left" class="forumListRow" colspan="2"><a href="/forums/?action=topic&topic_id={{replies_thread_id}}">{{replies_thread_subject}}</a></td>
+  <td align="left" class="forumListRow"><nobr>{{replies_thread_category}}&nbsp;</nobr></td>
+  <td align="center" class="forumListRowGrey"><nobr><a href="/search/?profile={{replies_thread_poster_user_id}}">{{replies_thread_poster_username}}</a></nobr></td>
+  <td align="center" class="forumListRow" align="right"><nobr>{{replies_thread_date}}</nobr></td>
+ </tr>
+ {{/section:threads}}
+ <tr>
+  <td><br>
+   <br>
+  </td>
+ </tr>
+{{/section:recentReplies}}
+
+
+{{section:recentComments}}
+ {{section:title_message autohide="yes"}}
+ <tr>
+  <td colspan="5" align="left" class="forumListHeader">Recently Added Comments</td>
+ </tr>
+ {{/section:title_message}}
+ <tr>
+  <td class="forumListColHeader" width="100%" colspan="2">Subject</td>
+  <td class="forumListColHeader">Category</td>
+  <td class="forumListColHeader">Author</td>
+  <td class="forumListColHeader">Age</td>
+ </tr>
+
+
+ {{section:status_message autohide="yes"}}
+ <tr>
+  <td colspan="5" align="left" class="forumListRowGrey">{{comments_status_message}}</td>
+ </tr>
+ {{/section:status_message}}
+
+
+ {{section:threads autohide="yes"}}
+ <tr>
+  <td align="left" class="forumListRow" colspan="2"><a href="/forums/?action=topic&topic_id={{comments_thread_id}}">{{comments_thread_subject}}</a></td>
+  <td align="left" class="forumListRow"><nobr>{{comments_thread_category}}</nobr></td>
+  <td align="center" class="forumListRowGrey"><nobr><a href="/search/?profile={{comments_thread_poster_user_id}}">{{comments_thread_poster_username}}</a></nobr></td>
+  <td align="center" class="forumListRow" align="right"><nobr>{{comments_thread_date}}</nobr></td>
+ </tr>
+ {{/section:threads}}
+ <tr>
+  <td><br>
+   <br>
+  </td>
+ </tr>
+{{/section:recentComments}}
+
+</table>
+

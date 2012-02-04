@@ -1,0 +1,94 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" 
+        "http://www.w3.org/TR/1998/REC-html40-19980424/loose.dtd"> 
+ 
+<html> 
+  <head> 
+    <title>Distributed City: Choose OpenPGP passphrase</title>  
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+    <link rel="stylesheet" href="/dcStyles.css" type="text/css"> 
+    <link REL="SHORTCUT ICON" href="/favicon.ico"> 
+  </head> 
+  <body text="#003333"> 
+    <FORM ACTION="?action=registration_gpg&SID={{sid}}" METHOD="POST">
+      <TABLE WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+	  <TR>
+	    <TD>
+	      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+		  <tr>
+		    <td class="headerLeft"><img src="/images/master/loginHeaderLeft.gif" width="341" height="39"></td>
+		    <td class="headerRight"><img src="/images/master/keyHeaderRight.gif" width="84" height="39"></td>
+		  </tr>
+	      </table>
+	    </TD>
+	  </TR>
+	  <TR>
+	    <TD>
+	      <table width="100%" border="0" cellspacing="0" cellpadding="3">
+{{section:error autohide="yes"}}
+		  <tr>
+		    <td class="errorCell"><span class="errorText">{{error_text}}</span></td>
+		  </tr>
+{{/section:error}}
+	  <tr>
+	    <td class="pageTitle">
+	      Step 2 of 3 - Specify OpenPGP Passphrase
+	    </td>
+	    </tr>
+		  <tr>
+		    <td class="pagePrompt">
+              <p>Distributed City is built from the ground up as a secure community. 
+                It includes OpenPGP messaging (using GNU Privacy Guard*) for which 
+                you now need to choose a passphrase.</p>
+              <p>We will soon be introducing services which will allow you to 
+                communicate securely in our chat rooms, and communicate with other 
+                PGP users outside of Distributed City. In the meantime, you will use 
+                this passphrase to decrypt and read private messages sent to you by 
+                other Distributed City users.</p>
+              <p>Your passphrase must be longer than 8 characters in length, and 
+                may be composed of any alphanumeric or punctuation symbols. This 
+                passphrase will be used by you to decrypt and read your private 
+                messages. It is the key to your Distributed City identity.</p>
+              <p>Your passphrase is not stored in a readable form on the Distributed 
+                City servers. If you forget your passphrase, we cannot retrieve 
+                it for you, and you will be unable to decrypt any of your private 
+                messages. </p>
+              <p class="tipText">* GNU Privacy Guard (GPG) is an open source OpenPGP compliant system for encrypting email and files.</p></td></tr>
+		  <tr>
+		    <td>
+		      <table width="100%" border="0" cellspacing="0" cellpadding="3">
+			  <tr>
+			    <td colspan="3" class="formHeader">Enter your new Distributed 
+                City OpenPGP passphrase below:</td>
+			  </tr>
+			  <tr>
+			    <td class="formRow" align="right"><span class="formFieldLabel">Passphrase:</span></td>
+			    <td class="formRow"><font size="2" color="#000000">
+				<input type="PASSWORD" name="passphrase" size="42">
+			      </font></td>
+			    <td width="100%" class="formRow"><span class="tipText">Passphrase 
+                    must be at least 8 characters long.</span></td>
+			  </tr>
+			  <tr>
+			    <td class="formRow" align="right"><span class="formFieldLabel">Confirm&nbsp;Passphrase:</span></td>
+			    <td class="formRow"><font size="2" color="#000000">
+				<input type="PASSWORD" name="passphrase_confirm" size="42">
+			      </font></td>
+			    <td class="formRow"><span class="tipText">A good passphrase should be at least five 
+                    words long containing a combination of upper and lower case 
+                    letters, spaces, numbers and symbols.</span></td>
+			  </tr>
+			  <tr align="right">
+			    <td colspan="3" class="buttonRow"><font size="2" color="#000000">
+				<input type="SUBMIT" name="register_gpg" value="Generate OpenPGP Keypair" class="formButton">
+			      </td>
+			  </tr>			  
+		      </table>
+		    </td>
+		  </tr>		  
+	      </table>
+	    </TD>
+	  </TR>
+      </TABLE>
+    </form>
+  </body>
+</html>

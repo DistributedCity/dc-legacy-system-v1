@@ -1,0 +1,40 @@
+# LP Versioning, in short:
+#
+# Released Package Version Format:
+# PACKAGE_NAME.MAJOR.MINOR.TIMESTAMP[.SYMBOLIC]
+#
+#  PACKAGE_NAME = name of package, duh
+#  
+#  MAJOR        = major version.  This is always human edited.
+#  
+#  MINOR        = minor version.  This is always auto-incremented.
+#                 It auto-resets to 0 if MAJOR is bumped.
+#  
+#  TIMESTAMP    = unix timestamp. This is always auto-generated.
+#
+#  SYMBOLIC     = optional symbolic identifier. This must be human edited.
+#                 If previous version contains same identifier, it is erased.
+#
+# Other variables used in this file:
+#
+#  LAST_VERSION = the previous version. used for comparisons.
+#  
+
+# pick a name for ourselves
+PACKAGE_NAME = distributedcity
+
+# We've finally reached 1.0
+MAJOR = 1 
+
+#### DO NOT TOUCH THIS LINE OR BELOW ###
+
+SYMBOLIC = 
+
+# leave this alone!
+MINOR = 0
+
+# leave this alone!
+TIMESTAMP = 1033451651
+
+# leave this alone!
+LAST_MAJOR = 1

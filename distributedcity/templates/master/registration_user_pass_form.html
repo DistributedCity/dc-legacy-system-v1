@@ -1,0 +1,117 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" 
+        "http://www.w3.org/TR/1998/REC-html40-19980424/loose.dtd">
+<html>
+<head>
+    <title>Distributed City: Choose Nym and login password</title> 
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <link rel="stylesheet" href="/dcStyles.css" type="text/css">
+    <link rel="SHORTCUT ICON" href="/favicon.ico">
+</head>
+<body text="#003333">
+<!--- /master/registration_user_pass_form.html -->
+<form action="/?action=registration" method="POST">
+      <p>
+      </p>
+      <table width="100%" border="0" cellpadding="0" cellspacing="0">
+	  <tr>
+	    <td>
+	      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+		  <tr>
+		    <td class="headerLeft">
+		      <img src="/images/master/loginHeaderLeft.gif" width="341" height="39">
+		    </td>
+		    <td class="headerRight">
+		      <img src="/images/master/newAccountHeaderRight.gif" width="84" height="39">
+		    </td>
+		  </tr>
+	      </table>
+	    </td>
+	  </tr>
+	  <tr>
+	    <td>
+	      <table width="100%" border="0" cellspacing="0" cellpadding="3">
+		{{section:error autohide="yes"}}
+		  <tr>
+		    <td class="errorCell">
+		      <span class="errorText">{{error_text}}</span>
+		    </td>
+		  </tr>
+	        {{/section:error}}
+	  <tr>
+	    <td class="pageTitle">
+	      Step 1 of 3 - Choose Nym and login password
+	    </td>
+	    </tr>
+		  <tr>
+		    <td class="pagePrompt">		 
+              <p>Welcome to Distributed City.</p>
+              <p>To create a new account, you must specify a Nym and login password. 
+                'Nym' is short for pseudonym. Your Nym name will be used as your login as well 
+                as your online identity within Distributed City. It is the 
+                name that will appear on your weblog, news and forum posts, as well as 
+                being used by others to send you encrypted instant messages.</p>
+              <p> The Nym <em>may not contain any spaces</em> but you may use any alphanumeric characters 
+                (A-Z, 0-9) and the underscore character (_), which is the accepted 
+                substitute for a space. These restrictions are so that Nym names may be used for email addresses and OpenPGP messaging.</p>
+              </td>
+		  </tr>
+		  <tr>
+		    <td>
+		      <table width="100%" border="0" cellspacing="0" cellpadding="3">
+			  <tr>
+			    <td colspan="3" class="formHeader">Enter your preferred Nym 
+                    and password below. Type confirmation of your password, then press 'Register 
+                    Now' to continue.</td>
+			  </tr>
+			  <tr>
+			    <td class="formRow" align="right">
+			      <span class="formFieldLabel">Nym&nbsp;Name:</span>
+			    </td>
+			    <td class="formRow">
+			       <input type="TEXT" name="username" value="{{username}}" size="20">
+			    </td>
+			    <td width="100%" class="formRow">
+			      <span class="tipText">Nym 
+                    must be a single word at least 5 characters long.<br>
+                    Examples of a valid Nym are: Phil_Zimmermann, aussieJim, Agent23, he1mlich, 
+                    BigBob</span>
+			    </td>
+			  </tr>
+			  <tr>
+			    <td class="formRow" align="right">
+		      <span class="formFieldLabel">Password:</span>
+			    </td>
+			    <td class="formRow">
+		              <input type="PASSWORD" name="password" size="20">
+			    </td>
+			    <td class="formRow"><span class="tipText">Password must be at 
+                    least 8 characters long.</span></span></td></td>
+			  </tr>
+			  <tr>
+			    <td class="formRow" align="right">
+	      <span class="formFieldLabel">Password&nbsp;Confirmation:</span>
+			    </td>
+			    <td class="formRow">
+			      <input type="PASSWORD" name="password_confirm" size="20">
+			    </td>
+			    <td class="formRow"><span class="tipText">A good password should 
+                    contain a combination of upper and lower case letters, numbers 
+                    and symbols; for example:<br>
+                    th!s%^g00d.</span>
+			    </td>
+			  </tr>
+			  <tr align="right">
+			    <td colspan="3" class="buttonRow">
+			      <input type="SUBMIT" name="register_now" value="Register Now" class="formButton">
+			    </td>
+			  </tr>
+		      </table>
+		    </td>
+		  </tr>
+	      </table>
+	    </td>
+	  </tr>
+      </table>
+    </form>
+  </body>
+</html>

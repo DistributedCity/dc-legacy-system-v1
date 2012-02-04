@@ -1,0 +1,19 @@
+These samples are very simplistic and utterly devoid of style. They are also a
+bit incomplete.  Feel free to contribute your own samples if you come up with
+better ones.
+
+For each sample<x>.php there is a corresponding sample<x>.tmpl that is loaded
+by the php file. This is done for the sake of simplicity.
+
+In real life usage, the goal is often to make the template independent of 
+the code.  Thus, you would probably do something like have the core code 
+in separate file(s), and then have a front-end php file that references 
+the core code and also determines which template to use.  Eg, it could 
+detect the user agent and decide to use the IE template, the mozilla 
+template, the handheld template, and so on.  Or it could use a special 
+getvar in the URL, such as tmpl=sometemplate.  Or it could even be based 
+on a user preference, or on and on...  
+
+That part is left as an exercise for the reader.
+
+Have a nice day.

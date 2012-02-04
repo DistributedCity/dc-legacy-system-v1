@@ -1,0 +1,48 @@
+<form action="?/user/settings?mode=general" method="post">
+<table width="100%%" border="0" cellspacing="0" cellpadding="3">
+      <tr>
+	<td colspan="3" class="pageTitle">
+	  General Settings
+	</td>
+      </tr>
+      <tr>
+	<td colspan="3" class="pagePrompt">
+	  To change your general settings, make the desired modifications and press 'Save Settings' below. You do not have to press 'Save Settings' after changing your Nym image.
+	</td>
+      </tr>
+{{section:change_avatar_status autohide="yes"}}
+      <tr>
+	<td class="reportCell" colspan="3">
+	  <span class="reportText">{{change_avatar_status}}</span>
+	</td>
+      </tr>
+{{/section:change_avatar_status}}
+      <tr>
+	<td align="right" class="formRow">
+	  <span class="formFieldLabel">Current&nbsp;Nym&nbsp;Image:</span>
+	  </td>
+	<td class="formRow">
+	  <img src="{{user_image_src}}" width="32" height="32">
+	  </td>
+	<td width="100%" class="formRow">
+	  <span class="generalButton"><a href="/user/settings/?mode=general&action=change_image_form">Change Nym Image</a></span>
+	  </td>
+	</tr>
+      <tr>
+	<td align="right" class="formRow">
+	  <span class="formFieldLabel">Hide&nbsp;Online&nbsp;Presence:</span>
+	</td>
+	<td class="formRow">
+          <input type="checkbox" name="hide_presence" {{hide_presence_status}}>
+	</td>
+	<td class="formRow">
+	  <span class="tipText">If checked, you will always appear as 'Offline' in other user's Buddy Lists.</span>
+	  </td>
+	</tr>
+      <tr align="right">
+	<td colspan="3" class="buttonRow">
+	  <input type="submit" name="save_settings" value="Save Settings"> 
+	  </td>
+	</tr>
+</table>
+</form>

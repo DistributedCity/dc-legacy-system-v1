@@ -1,0 +1,160 @@
+    <form action="?action=preview_post" name="post" method="post">
+      <input type="hidden" name="action" value="post">
+      <table width="100%" border="0" cellspacing="0" cellpadding="3">
+        <tr>
+          <td class="pageTitle">Submit New Weblog Entry.</td>
+        </tr>
+        <tr>
+          <td class="pagePrompt">
+          Submit a new article for your Weblog (and optional consideration by the Distributed City moderators as a front page feature story). It is very important that you write a clear and simple subject, and include relevant URLs in your story.<br><em>TIP:</em> <span class="tipText">HTML tags are not supported. Instead use the [ ] tags (quick formatting buttons incl. URLs are around the compose area).</span> 
+	     </td>
+        </tr>
+      {{section:error_row autohide="yes"}}
+      <tr>
+	<td class="errorCell">
+	  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+	    <tr>
+	      <td>
+		<img src="/images/master/iconError.gif" width="33" height="35" vspace="2" hspace="2"> 
+	      </td>
+	      <td width="100%">
+		<span class="errorText"><span class="errorLabel">ERROR:</span> {{error_message}}</span> 
+	      </td>
+	    </tr>
+	  </table>
+	</td>
+      </tr>
+      {{/section:error_row}}
+      <tr>
+	<td>
+	  <table width="100%" border="0" cellspacing="0" cellpadding="3">
+	    <tr>
+	      <td class="formHeader" colspan="3">Enter the details of the article below, then press the 'Preview Post' button.</td>
+	    </tr>
+	    <tr>
+	      <td class="formRow" align="right"><span class="formFieldLabel">Subject:</span></td>
+	      <td colspan="2">
+	  <table width="100% cellpadding="0" cellspacing="0">
+            <tr>
+	      <td class="formRow">
+		<input type="text" name="new_post_subject" size="64" maxlength="100" value="{{new_post_subject}}" class="formText">
+	      </td>
+	      <td width="100%" class="formRow"><span class="tipText">Be descriptive, clear and simple.</span></td>
+	   </tr>
+         </table>
+              </td>
+           </tr>
+
+
+{{section:topic}}
+	<tr>
+	  <td class="formRow"  align="right">
+	    <span class="formFieldLabel">Category:</span>
+	  </td>
+	  <td class="formRow">
+	    <select name="new_post_topic_id" class="small" class="optionText"> 
+	      <option>
+		None
+	      </option>
+{{section:topic_selection}}
+	      <option value="{{topic_id}}" {{topic_selected_state}}>
+		{{topic_label}}
+	      </option>
+{{/section:topic_selection}}
+
+	    </select> 
+	  </td>
+
+                <td class="formRow"><span class="tipText">Pick a suitable category.</span></td>
+
+	</tr>
+{{/section:topic}}
+
+        <tr>
+        <td></td>
+        <td>    
+            
+          <table border="0" cellspacing="0" cellpadding="0" width="10%">
+            <tr align="center" valign="middle">
+          <td>
+            <span class="genmed"> <input type="button" class="postButton" accesskey="b" name="addbbcode0" value=" B " style="font-weight:bold;" onclick="bbstyle(0)" onmouseover="helpline('b')" /> </span> 
+          </td>
+          <td>
+            <span class="genmed"> <input type="button" class="postButton" accesskey="i" name="addbbcode2" value=" i " style="font-style:italic;" onclick="bbstyle(2)" onmouseover="helpline('i')" /> </span> 
+          </td>
+          <td>
+            <span class="genmed"> <input type="button" class="postButton" accesskey="u" name="addbbcode4" value=" u " style="text-decoration: underline;" onclick="bbstyle(4)" onmouseover="helpline('u')" /> </span> 
+          </td>
+          <td>
+            <span class="genmed"> <input type="button" class="postButton" accesskey="q" name="addbbcode6" value="Quote"  onclick="bbstyle(6)" onmouseover="helpline('q')" /> </span> 
+          </td>
+          <td>
+            <span class="genmed"> <input type="button" class="postButton" accesskey="c" name="addbbcode16" value="PHP Code" onclick="bbstyle(16)" onmouseover="helpline('c')" /> </span> 
+          </td>
+          <td>
+            <span class="genmed"> <input type="button" class="postButton" accesskey="w" name="addbbcode18" value="URL" onclick="bbstyle(18)" onmouseover="helpline('w')" /> </span> 
+          </td>
+          <td>
+            <span class="genmed"> <input type="button" class="postButton" accesskey="p" name="addbbcode20" value="PRE" onclick="bbstyle(20)" onmouseover="helpline('p')" /> </span> 
+          </td>
+            </tr>
+            <tr>
+          <td colspan="7">
+            <span class="gensmall"> <input type="text" name="helpbox" size="45" maxlength="100" style="width:450px; font-size:10px" class="helpline" value="TIP: Styles can be applied to selected text" /> </span> 
+          </td>
+            </tr>
+            <tr>
+          <td colspan="7">
+            <span class="tipText"><nobr>TIP: Quick formatting buttons apply to Lead In box only. Manually entered [ ] tags work in both.</nobr></span> 
+          </td>
+            </tr>
+          </table>
+        </td>
+        </tr>
+
+
+              <tr>
+                <td valign="top" class="formRow" align="right"><br>
+            <span class="formFieldLabel">Lead In:</span></td>
+                <td class="formRow" colspan="2">
+                
+                  <textarea name="message" rows="6" cols="64" class="formText">{{new_post_leadin}}</textarea>
+          </td>
+              </tr>
+              <tr>
+                <td valign="top" class="formRow" align="right"><br>
+            <span class="formFieldLabel">Main&nbsp;Body:</span>
+<br> <span class="tipText">Leave empty if brief Lead-In above is sufficient.</span></td>
+                <td class="formRow" colspan="2">
+                  <textarea name="new_post_body" rows="20" cols="64" class="formText">{{new_post_body}}</textarea>
+          </td>
+              </tr>
+              <tr>
+                <td class="formRow" align="right"><span class="formFieldLabel">Main&nbsp;Page<br>Candidate:</span>
+          </td>
+                <td colspan="2" class="formRow">
+                  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td>
+                        <input type="checkbox" name="main_page_candidate" value="true" {{main_page_candidate_checked_flag}}>
+                </td>
+                      <td><img src="/images/master/spacer_clear.gif" width="3" height="2"></td>
+                      <td width="100%"><span class="tipText">If you check this box, your article will also be submitted as a candidate for inclusion as a front page feature story. DC moderators may make text/grammar changes to your submission, and may also add their own comments. Such changes <i>will</i> be reflected on your own Weblog page.</span></td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>       
+            </table>
+          </td>
+        </tr>        
+        <tr align="right">
+          <td class="buttonRow">
+            <input type="submit" name="cancel" value="Cancel">
+            <input type="submit" name="preview_post" value="Preview Post">
+          </td>
+        </tr>
+      </table>
+</form>
+
+
+{{formatting_javascript alt="adsfasdfadsfdsaf"}}

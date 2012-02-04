@@ -1,0 +1,231 @@
+    <table width="100%" cellpadding="3" cellspacing="0">
+      <tr>
+	<td class="commentTitleTableRow">
+	  <table width="100%" border="0" cellspacing="0" cellpadding="3">
+	    <tr>
+	      <td rowspan="2"><img src="{{user_image_src}}" alt="[IMG]" width="32" height="32"></td>
+	      <td class="commentTitle" width="100%">{{message_subject}}</td>
+	    </tr>
+	    <tr>
+	      <td class="commentAuthor">from <a href="/search/?profile={{message_from_user_id}}">{{message_from_username}}</a> on <nobr>{{message_date}}</nobr></td>
+	    </tr>
+	  </table>
+	</td>
+      </tr>
+
+{{section:error_message autohide="yes"}}
+    <tr>
+      <td class="errorCell"><span class="errorLabel">Error:</span>&nbsp;{{error_message}}
+      </td>
+    </tr>
+{{/section:error_message}}
+
+{{section:passphrase_box}}
+    <tr>
+      <td class="buttonRow" height="19" align="right">
+	      <form method="post" action="?action=read&SID={{sid}}">
+	  <input type="hidden" name="mid" value="{{message_id}}">
+	  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+	    <tr>
+	      <td colspan="3"><span class="general">Enter&nbsp;PGP&nbsp;Passphrase&nbsp;to&nbsp;decrypt:&nbsp;</span></td>
+	    </tr>
+	    <tr>
+	      <td width="65%"> <input type="password" name="passphrase" size="32">&nbsp;<input type="submit" name="decrypt_message" value="Decrypt" style="background-color:#DDDDEE; color:#000033; face:verdana; font-size:10pt">
+	      </td>
+	      <td width="3%" align="right"> <input type="checkbox" name="cache_passphrase">
+	      </td>
+	      <td width="100%"><span class="general">&nbsp;Remember&nbsp;passphrase&nbsp;for&nbsp;this&nbsp;session&nbsp;</span></td>
+	    </tr>
+	  </table>
+	</form>
+      </td>
+    </tr>
+{{/section:passphrase_box}}
+
+    
+    <tr>
+      <td class="commentContent">{{message_body}}</td>
+    </tr>
+    <tr>
+      <td class="buttonRow" height="19" align="right">
+	<form method="post" action="?SID={{sid}}">
+	  <input type="hidden" name="mid" value="{{message_id}}">
+	  <input type="submit" name="Ok" value="OK">
+	  <input type="submit" name="delete_message" value="Delete">
+	  <input type="submit" name="save_message" value="Save">
+	</form>
+          </td>
+        </tr>
+      </table>
+
+
+    <form method="post" action="{{form_action}}&SID={{sid}}" name="post">
+{{section:hidden_vars autohide="yes"}}<input type="hidden" name="{{hidden_name}}" value="{{hidden_value}}">{{/section:hidden_vars}}
+      <table width="100%" border="0" cellspacing="0" cellpadding="3" class="pageTitle">
+          <tr>
+            <td class="pageTitle">Compose Reply</td>
+          </tr>
+          <tr>
+            <td class="pagePrompt">If you wish to reply to the above message, enter your reply below.</td>
+          </tr>
+          <tr>
+            <td>
+              <table width="100%" border="0" cellspacing="0" cellpadding="3">
+                <tr>
+                  <td class="formRow" align="right"><span class="formFieldLabel">To:</span></td>
+                  <td class="formRow" width="100%">
+		  <span class="formFieldValue">{{new_message_to}}</span>
+                </td>
+                </tr>
+                <tr>
+                  <td class="formRow" align="right"><span class="formFieldLabel">Subject:</span></td>
+                  <td class="formRow">
+		  <input type="text" name="subject" size="64" maxlength="100" value="{{new_message_subject}}" style="font-family: Verdana, Helvetica, Lucida, Arial, sans-serif; font-size: 12px; color: #033;">
+                </td>
+	      </tr>
+	      <tr>
+		<td>&nbsp;</td>
+		<td>	    <table border="0" cellspacing="0" cellpadding="2">
+	      <tr align="center" valign="middle">
+		<td>
+		  <span class="genmed"> <input type="button" class="postButton" accesskey="b" name="addbbcode0" value=" B " style="font-weight:bold; width: 30px" onclick="bbstyle(0)" onmouseover="helpline('b')" /> </span> 
+		</td>
+		<td>
+		  <span class="genmed"> <input type="button" class="postButton" accesskey="i" name="addbbcode2" value=" i " style="font-style:italic; width: 30px" onclick="bbstyle(2)" onmouseover="helpline('i')" /> </span> 
+		</td>
+		<td>
+		  <span class="genmed"> <input type="button" class="postButton" accesskey="u" name="addbbcode4" value=" u " style="text-decoration: underline; width: 30px" onclick="bbstyle(4)" onmouseover="helpline('u')" /> </span> 
+		</td>
+		<td>
+		  <span class="genmed"> <input type="button" class="postButton" accesskey="q" name="addbbcode6" value="Quote" style="width: 50px" onclick="bbstyle(6)" onmouseover="helpline('q')" /> </span> 
+		</td>
+		<td>
+		  <span class="genmed"> <input type="button" class="postButton" accesskey="w" name="addbbcode16" value="URL" style="text-decoration: underline; width: 40px" onclick="bbstyle(16)" onmouseover="helpline('w')" /> </span> 
+		</td>
+	      </tr>
+	      <tr>
+		<td colspan="5">
+		  <span class="gensmall"> <input type="text" name="helpbox" size="45" maxlength="100" style="width:450px; font-size:10px" class="helpline" value="Tip: Styles can be applied quickly to selected text" /> </span> 
+		</td>
+	      </tr>
+	    </table>
+		</td>
+	      </tr>
+	      <tr>
+		<td valign="top" align="left" class="formRow">
+		  <table width="42" border="0" cellspacing="0" cellpadding="5">
+		    <tr align="center">
+		      <td colspan="2" class="gensmall">
+			<span class="formFieldLabel">Emoticons</span> 
+		      </td>
+		    </tr>
+		    <tr align="center" valign="middle">
+		      <td>
+			<a href="javascript:emoticon(':D')"><img src="/images/emoticons/icon_biggrin.gif" width="15" height="15" align="abs_middle" border="0" alt="Very Happy" title="Very Happy" /></a> 
+		      </td>
+		      <td>
+			<a href="javascript:emoticon(':)')"><img src="/images/emoticons/icon_smile.gif" width="15" height="15" align="abs_middle" border="0" alt="Smile" title="Smile" /></a> 
+		      </td>
+		    </tr>
+		    <tr align="center" valign="middle">
+		      <td>
+			<a href="javascript:emoticon(':(')"><img src="/images/emoticons/icon_sad.gif" width="15" height="15" align="abs_middle" border="0" alt="Sad" title="Sad" /></a> 
+		      </td>
+		      <td>
+			<a href="javascript:emoticon(':o')"><img src="/images/emoticons/icon_surprised.gif" width="15" height="15" align="abs_middle" border="0" alt="Surprised" title="Surprised" /></a> 
+		      </td>
+		    </tr>
+		    <tr align="center" valign="middle">
+		      <td>
+			<a href="javascript:emoticon('8O')"><img src="/images/emoticons/icon_eek.gif" width="15" height="15" align="abs_middle" border="0" alt="Shocked" title="Shocked" /></a> 
+		      </td>
+		      <td>
+			<a href="javascript:emoticon(':?')"><img src="/images/emoticons/icon_confused.gif" width="15" height="15" align="abs_middle" border="0" alt="Confused" title="Confused" /></a> 
+		      </td>
+		    </tr>
+		    <tr align="center" valign="middle">
+		      <td>
+			<a href="javascript:emoticon('8)')"><img src="/images/emoticons/icon_cool.gif" width="15" height="15" align="abs_middle" border="0" alt="Cool" title="Cool" /></a> 
+		      </td>
+		      <td>
+			<a href="javascript:emoticon(':lol:')"><img src="/images/emoticons/icon_lol.gif" width="15" height="15" align="abs_middle" border="0" alt="Laughing" title="Laughing" /></a> 
+		      </td>
+		    </tr>
+		    <tr align="center" valign="middle">
+		      <td>
+			<a href="javascript:emoticon(':x')"><img src="/images/emoticons/icon_mad.gif" width="15" height="15" align="abs_middle" border="0" alt="Mad" title="Mad" /></a> 
+		      </td>
+		      <td>
+			<a href="javascript:emoticon(':P')"><img src="/images/emoticons/icon_razz.gif" width="15" height="15" align="abs_middle" border="0" alt="Razz" title="Razz" /></a> 
+		      </td>
+		    </tr>
+		    <tr align="center" valign="middle">
+		      <td>
+			<a href="javascript:emoticon(':oops:')"><img src="/images/emoticons/icon_redface.gif" width="15" height="15" align="abs_middle" border="0" alt="Embarassed" title="Embarassed" /></a> 
+		      </td>
+		      <td>
+			<a href="javascript:emoticon(':cry:')"><img src="/images/emoticons/icon_cry.gif" width="15" height="15" align="abs_middle" border="0" alt="Crying or Very sad" title="Crying or Very sad" /></a>
+		      </td>
+		    </tr>
+		    <tr align="center" valign="middle">
+		      <td>
+			<a href="javascript:emoticon(':evil:')"><img src="/images/emoticons/icon_evil.gif" width="15" height="15" align="abs_middle" border="0" alt="Evil or Very Mad" title="Evil or Very Mad" /></a> 
+		      </td>
+		      <td>
+			<a href="javascript:emoticon(':twisted:')"><img src="/images/emoticons/icon_twisted.gif" width="15" height="15" align="abs_middle" border="0" alt="Twisted Evil" title="Twisted Evil" /></a> 
+		      </td>
+		    </tr>
+		    <tr align="center" valign="middle">
+		      <td>
+			<a href="javascript:emoticon(':roll:')"><img src="/images/emoticons/icon_rolleyes.gif" width="15" height="15" align="abs_middle" border="0" alt="Rolling Eyes" title="Rolling Eyes" /></a> 
+		      </td>
+		      <td>
+			<a href="javascript:emoticon(':wink:')"><img src="/images/emoticons/icon_wink.gif" width="15" height="15" align="abs_middle" border="0" alt="Wink" title="Wink" /></a> 
+		      </td>
+		    </tr>
+		    <tr align="center" valign="middle">
+		      <td>
+			<a href="javascript:emoticon(':!:')"><img src="/images/emoticons/icon_exclaim.gif" width="15" height="15" align="abs_middle" border="0" alt="Exclamation" title="Exclamation" /></a> 
+		      </td>
+		      <td>
+			<a href="javascript:emoticon(':?:')"><img src="/images/emoticons/icon_question.gif" width="15" height="15" align="abs_middle" border="0" alt="Question" title="Question" /></a> 
+		      </td>
+		    </tr>
+		    <tr align="center" valign="middle">	    
+		      <td>
+			<a href="javascript:emoticon(':idea:')"><img src="/images/emoticons/icon_idea.gif" width="15" height="15" align="abs_middle" border="0" alt="Idea" title="Idea" /></a> 
+		      </td>
+		      <td>
+			<a href="javascript:emoticon(':arrow:')"><img src="/images/emoticons/icon_arrow.gif" width="15" height="15" align="abs_middle" border="0" alt="Arrow" title="Arrow" /></a> 
+		      </td>
+		    </tr>
+		  </table>
+		</td>
+		<td class="formRow">
+		  <textarea name="message" rows="25" cols="64" style="font-family:  Verdana, Helvetica, Lucida, Arial, sans-serif; font-size: 12px; color: #033;">{{new_message_body}}</textarea>
+		  
+                </td>
+	      </tr>
+	      <tr>
+		<td class="formRow" align="right"><span class="formFieldLabel">Encryption Options:</span></td>
+		<td class="formRow">
+                    <input type="checkbox" name="encrypt_message" value="yes" {{encrypt_body_checked_flag}}><span class="formFieldValue">
+                  Encrypt Message&nbsp;&nbsp;
+                    <input type="checkbox" name="encrypt_subject" value="yes" {{encrypt_subject_checked_flag}}>
+                  Encrypt Subject <span class="tipText">(only if message is also encrypted)</span></span></td>
+                </tr>
+                <tr align="right">
+                  <td colspan="2" class="buttonRow">
+                    <input type="submit" name='cancel' value="Cancel">
+                    <input type="submit" name="preview" value="Preview Message">
+                </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+          </tr>
+        </table>
+</form>
+{{formatting_javascript}}

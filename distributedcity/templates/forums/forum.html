@@ -1,0 +1,47 @@
+{{location_bar}}
+    <table width="100%" border="0" cellspacing="0" cellpadding="3">
+      <tr>
+	<td class="forumListColHeader">&nbsp;</td>
+	<td class="forumListColHeader" width="100%">Thread</td>
+	<td class="forumListColHeader">&nbsp;Thread&nbsp;Starter&nbsp;</td>
+	<td class="forumListColHeader">Replies</td>
+	<td class="forumListColHeader">Views</td>
+      </tr>
+
+
+{{section:status_message autohide="yes"}}
+    <tr>
+      <td colspan="6" align="left" class="forumListRowGrey">
+	{{status_message}}
+      </td>
+    </tr>
+{{/section:status_message}}
+
+
+{{section:topics autohide="yes"}}
+    <tr>
+      <td class="forumListRowGrey" align="center"><img src="/images/forum/topicIconNew.gif" border="0" width="24" height="24" alt=""></td>
+      <td align="left" class="forumListRow">
+	<a href="/forums/?action=topic&topic_id={{topic_id}}">{{topic_subject}}</a>
+      </td>
+      <td align="center" class="forumListRowGrey">
+	<a href="/search/?profile={{topic_poster_user_id}}">{{topic_poster_username}}</a>
+      </td>
+      <td align="center" class="forumListRow" align="center">
+	{{topic_replies}}
+      </td>
+      <td class="forumListRowRight" align="center">
+	{{topic_views}}
+      </td>
+    </tr>
+{{/section:topics}}
+    <tr>
+      <td class="forumListFooter" colspan="6" align="right">
+<form action="?action=new_topic&parent_id={{forum_id}}" method="post">
+{{section:hiddenVars autohide="yes"}}
+<input type="hidden" name="{{hidden_name}}" value="{{hidden_value}}">
+{{/section:hiddenVars}}
+<input type="submit" name="button" value="Create New Thread" class="formButton"></form>
+      </td>
+    </tr>
+  </table>

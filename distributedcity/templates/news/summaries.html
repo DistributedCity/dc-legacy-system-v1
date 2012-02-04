@@ -1,0 +1,53 @@
+{{section:frontpage_header autohide="yes"}}
+    <table width="100%" cellspacing="0" cellpadding="0" border="0">
+      <tr>
+	<td class="pageTitle">{{header_frontpage_name}} Articles
+	</td>
+      </tr>
+    </table>
+
+{{/section:frontpage_header}}
+
+
+{{section:blog_header autohide="yes"}}
+    <table width="100%" cellspacing="0" cellpadding="0" border="0">
+      <tr>
+	<td class="pageTitle"><img src="{{user_image_src}}" width="32" height="32" align="absmiddle" vspace="2">&nbsp;<a href="/search/?profile={{blog_user_id}}">{{blog_username}}</a>'s Personal Weblog
+	</td>
+      </tr>
+      <tr>
+	<td>
+	  <table width="100%" cellspacing="0" cellpadding="3">
+	    <tr>
+	      <td><span class="generalButton"><a href="/user/settings/?mode=recommendations&action=add_blog&blog_id={{blog_user_id}}">Recommend&nbsp;This&nbsp;Weblog</a></span>
+	      </td>
+	      <td width="100%">
+		&nbsp;
+	      </td>
+	    </tr>
+	  </table>
+	</td>
+      </tr>
+    </table>
+{{/section:blog_header}}
+
+
+{{section:category_header autohide="yes"}}
+    <table width="100%" cellspacing="0" cellpadding="0" border="0">
+      <tr>
+	<td class="pageTitle"><img src="/images/topics/{{header_category_icon}}.gif" width="32" height="32" align="absmiddle" vspace="2">&nbsp;Recent {{header_category_name}} Articles
+	</td>
+      </tr>
+    </table>
+{{/section:category_header}}
+
+
+{{section:error_message autohide="yes"}}
+<h3><font color="red">Error: {{error_message}}</font></h3>
+{{/section:error_message}}
+
+{{section:ok_message autohide="yes"}}
+<h3><font color="Green">OK: {{ok_message}}</font></h3>
+{{/section:ok_message}}
+
+{{summaries_content}}

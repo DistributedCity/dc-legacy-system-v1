@@ -1,0 +1,43 @@
+<table>
+<TR>
+ <TD BGCOLOR="#006666" ALIGN="CENTER"><FONT COLOR="#FFFFFF" SIZE="1"><b>Submit New Post</b></FONT>
+ </TD>
+</TR>
+
+<TR>
+ <TD>
+
+<form action="?id={{new_post_id}}" method="post">
+{{topic_pulldown}}
+
+<input type="hidden" name="action" value="post">
+<table align=center border=0 cellpadding=3 cellspacing=0>
+<tr>
+	<td align=right><p style="margin:0;padding:0;font-size:x-small;font-weight:bold;">Username:</p></td>
+	<td align=left>estaban</td>
+</tr>
+<tr>
+	<td align=right><p style="margin:0;padding:0;font-size:x-small;font-weight:bold;">Subject:</p></td>
+	<td align=left><input type="text" name="new_post_subject" size=50 maxlength=50 value="RdE: {{new_post_default_subject}}"></td>
+</tr>
+
+
+<tr>
+	<td align=right><p style="margin:0;padding:0;font-size:x-small;font-weight:bold;">Topic:</p></td>
+	<td align=left><input type="text" name="new_post_subject" size=50 maxlength=50 value="RE: {{new_post_default_subject}}"></td>
+</tr>
+
+<tr>
+	<td colspan=2>Lead-In<textarea name="new_post_leadin" rows=10 cols=50></textarea></td>
+</tr>
+
+
+<tr>
+	<td colspan=2>Full Text<textarea name="new_post_body" rows=10 cols=50></textarea></td>
+</tr>
+
+<tr>
+	<td colspan=2 align=center><input type="submit" value="        Add this comment        "></td>
+</tr>
+</table>
+</form>

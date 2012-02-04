@@ -1,0 +1,31 @@
+    <table width="125" border="0" cellspacing="0" cellpadding="3">  
+      <tr>
+	<td height="5"><img src="/images/master/spacer_clear.gif" width="2" height="3"> </td>
+      </tr>
+      <tr>
+	<td width="100%" class="leftBlockHeader">Recent {{box_label}} Entries</td>
+      </tr>
+    {{section:articles}}
+    <tr>
+      <td class="sidebarListCellLeft"><a HREF="/news/article/?aid={{article_id}}">{{article_subject}}</a></td>
+    </tr>
+    {{/section:articles}}
+
+    {{section:older_articles_link_row}}
+     <tr>
+       <td class="menuOff"><A HREF="{{past_articles_url}}">All Older Articles...</A></td>
+     </tr>
+    {{/section:older_articles_link_row}}
+
+    {{section:older_articles_none_row}}
+     <tr>
+       <td class="menuOff">No Older Articles Found...</A></td>
+     </tr>
+    {{/section:older_articles_none_row}}
+
+   <tr>
+      <td class="leftBlockFooter">
+	<img src="/images/master/spacer_clear.gif" width="3" height="5">
+      </td>
+    </tr>
+  </table>

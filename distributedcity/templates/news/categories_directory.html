@@ -1,0 +1,41 @@
+    <table width="100%" border="0" cellspacing="0" cellpadding="3">
+      <tr>
+	<td colspan="3" class="pageTitle">
+	  Recent Frontpage Feature Stories by Category
+	</td>
+      </tr>
+      <tr>
+	<td colspan="3" class="pagePrompt">
+	Distributed City uses the following categories to sort News and Weblog articles. The Forums also share the same categories. Click the category icon or name below to view recent Frontpage feature stories in each category. For recent comments and Forum posts, see the Forums tab.
+	</td>
+      </tr>
+      <tr>
+	<td class="colHeaderOff">
+	  Icon
+	</td>
+	<td class="colHeaderOff">
+	  Category
+	</td>
+	<td class="colHeaderOff">
+	  Description
+	</td>
+      </tr>
+{{section:categories}}
+    <tr>
+      <td class="formRow">
+	<a href="/news/categories/?category_id={{category_id}}"><img src="/images/topics/{{category_icon}}.gif" border="0" width="64" height="64" align="right" hspace="3">
+      </td>
+      <td class="formRow">
+	<a href="/news/categories/?category_id={{category_id}}">{{category_name}}</a>
+      </td>
+      <td width="100%" class="formRow">
+	{{category_description}}
+      </td>
+    </tr>
+{{/section:categories}}
+      <tr>
+	<td colspan="3" class="buttonRow">
+	  &nbsp;
+	</td>
+      </tr>
+    </table>

@@ -1,0 +1,43 @@
+    <table width="100%" cellpadding="3" cellspacing="0" border="0">
+      <tr>
+	<td class="pageTitle">
+	  Browse Directory {{section:browse_section autohide="yes"}}[Range: {{start_letter}} - {{end_letter}}, Total Found:{{num_found}}]{{/section:browse_section}}
+{{section:browse_pattern autohide="yes"}}[Pattern: {{pattern}}]{{/section:browse_pattern}}
+	</td>
+      </tr>
+      <tr>
+	<td class="pagePrompt">
+	  Below are listed all of the matching users in Distributed City. Click on any to view a profile.
+	</td>
+      </tr>
+
+
+    </table>
+    <table width="100%" cellpadding="3" cellspacing="0" border="0">
+
+{{section:result_row_none}}
+   <tr>
+     <td align="left" class="listRow" colspan="3">
+Your search returned no results.
+     </td>
+   </tr>
+{{/section:result_row_none}}
+
+{{section:error autohide="yes"}}
+      <tr>
+	<td class="errorCell">
+	  <span class="errorText"><span class="errorLabel">Error:</span>{{error_message}}</span>
+	</td>
+      </tr>
+{{/section:error}}
+
+{{section:user_listing_block}}
+ {{user_listing_block}}
+{{/section:user_listing_block}}
+    <tr>
+      <td class="buttonRow" colspan="5">
+	&nbsp;
+      </td>
+    </tr>
+  </table>
+

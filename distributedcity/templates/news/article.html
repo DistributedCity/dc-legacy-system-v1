@@ -1,0 +1,94 @@
+<!-- BEGIN news/news_article.html TEMPLATE -->
+{{section:article}}
+<!-- BEGIN article SECTION -->
+    <table width="100%" border="0" cellspacing="0" cellpadding="3">
+    {{section:comment_submit_status autohide="yes"}}
+    <!-- BEGIN comment_submit_status section -->
+    <tr> 
+      <td class="reportCellSolo"><span class="reportText">{{post_status}}</span></td> 
+    </tr>
+    <tr>
+      <td>
+      </td>
+    </tr>
+    {{/section:comment_submit_status}}
+      <tr>
+	<td class="newsItemTitle">
+	  {{article_subject}}
+	  </td>
+{{section:frontPageFeatured hidden="yes"}} 
+ <tr>
+  <td class="newsItemSubtitle" align='center'>A front page feature story!</td>
+ </tr>
+{{/section:frontPageFeatured}} 
+	</tr>
+      <tr>
+	<td class="newsItemSubtitle">
+	  <table border="0" cellpadding="0" cellspacing="0">
+	    <tr>
+	      <td>
+		<img src="{{user_image_src}}" ALT="[IMG]" hspace="3" width="16" height="16">
+	      </td>
+	      <td width="100%">
+		<span class="newsItemSubtitleText">Posted by <a href="/search/?profile={{article_poster_id}}">{{article_poster_username}}</a> on <nobr>{{article_date_time}}</nobr></span>
+	      </td>
+	    </tr>
+	  </table>
+	  </td>
+	</tr>
+      <tr>
+	<td class="newsItemContent">
+<a href="/news/categories/?category_id={{category_id}}"><img src="/images/topics/{{category_icon}}.gif" border="0" width="64" height="64" align="right" hspace="3" alt="{{topic_alt}}"></a>{{article_leadin}}{{article_body}}
+	  </td>
+	</tr>
+        <tr>
+          <td class="newsItemFooter">
+	<span class="postCount">This article has {{comment_count_text}}</span></td>
+        </tr>
+  </table>
+    <FORM method="post" action="?SID={{sid}}">
+      <input type="hidden" name="new_post_parent_id" value="{{article_id}}">
+      <input type="hidden" name="new_post_parent_subject" value="{{article_subject}}">
+      <table WIDTH="100%" BORDER="0" CELLSPACING="0" CELLPADDING="3">
+	<tr>
+	  <td class="articleReplyRow" align="left">
+	    <input type="submit" name="reply" value="Reply to this Article">
+	  </td>
+	  <td width="100%" align="right" class="articleReplyRow">
+
+Comment View:
+
+
+	  </td>
+	  <td align="right" class="articleReplyRow">
+	    <select name="change_mode">
+         <option value="flat_desc" {{selected_flat_desc}}>Flat - Recent First</option>
+         <option value="flat_asc" {{selected_flat_asc}}>Flat - Oldest First</option>
+         <option value="flat" {{selected_flat}}>Flat - Nested Order</option>
+         <option value="nested" {{selected_nested}}>Nested</option>
+         <option value="none" {{selected_none}}>OFF</option>
+            </select>
+
+
+          </td>
+          <td align="right" class="articleReplyRow">
+
+            <input type="submit" name="change" value="Change">
+
+            </td>
+        </tr>
+      </table>
+    </form>
+<!-- END article SECTION -->
+{{/section:article}}
+
+<!-- comment_block token here -->
+
+  {{comment_block}}
+
+
+
+<!-- END news/news_article.html TEMPLATE -->
+
+
+

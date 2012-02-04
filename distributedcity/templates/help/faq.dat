@@ -1,0 +1,255 @@
+<c>General
+<q>What is the purpose of Distributed City?
+<a>Distributed City is a streamlined, secure community environment for sovereign individuals and entrepreneurs.
+<BR>
+The following services are provided for discussion, and communications between users:
+<BR>
+<BR>
+News - for making quick and relevant comments on breaking news,<BR>
+Forums - for ongoing in-depth discussions and commentary,<BR>
+Weblogs - publish your own articles, and commentary (and submit articles to News),<BR>
+Messaging - for OpenPGP secured private communications with other users,<BR>
+Chat - for quick temporary conversations using IIP (the Invisible Internet Project).
+<BR>
+<BR>
+Other Services are described from the tab of the same name (including access to the Distributed City source code).
+<BR>
+<BR>
+Distributed City aims to be a fully open source community environment that is built for its users, by its users.
+
+
+
+<c>Accounts
+<q>What is a Nym?
+<a>A Nym is your online identity. Pronounced NIHM, bring a shortened form of 'pseudo-nym', this is a unique name and associated OpenPGP key within Distributed City. A Nym has a reputation attached and is used by you to build up reputation capital.
+Nyms and associated reputation are a foundation upon which a whole new market and sphere of multinational business
+that would otherwise be impractical will be based.
+<BR>
+Other items are associated with your Nym, such as a Nym Image (or 'Avatar') and Profile information for example outside email address, web page, interests, DMT (ALTA) claim number for making payments may also be attached to your Distributed City Nym (See: Profile) below.
+
+
+
+<c>Accounts
+<q>Can I apply the reputation I've built up with my Distributed City Nym outside of Distributed City?
+<a>Not yet, but we're working with other service providers to make this happen. Notable efforts in this area include www.WebofTrust.org.
+
+<c>Accounts
+<q>Can I change my Nym?
+<a>No. It is bound to your OpenPGP public key. If you want a different Nym you must create a new account.
+
+<c>Accounts
+<q>How do I change my password?
+<a>Go to your <a href="/user/settings/">User Settings</a> page and click on 'Security'.
+
+<c>Accounts
+<q>How do I change my OpenPGP passphrase?
+<a>Go to your <a href="/user/settings/">User Settings</a> page and click on 'OpenPGP'.
+
+<c>Accounts
+<q>How do I change my Nym Image?
+<a>Go to your <a href="/user/settings/">User Settings</a> page and click on 'General' then 'Change Nym Image'. You'll be able to upload your own Nym Image soon.
+
+<c>Accounts
+<q>How do I keep other users from seeing when I'm online?
+<a>Go to your <a href="/user/settings/">User Settings</a> page and check the 'Hide Online Presence' checkbox.
+<BR>
+When this is checked you will always appear as 'Offline' in other user's Buddy Lists.      
+
+<c>Accounts
+<q>I forgot or lost my password, can you send it to me please?
+<a>No. The only way for us to verify who you are is for you to enter in the correct password. So don't lose your password.
+
+<c>Accounts
+<q>But you don't understand, I cannot access my Distributed City account because I lost my password, how can I get in if I can't remember my password and you won't send it to me?
+<a>You must create a new account.
+
+<c>Accounts
+<q>I forgot or lost my passphrase for my OpenPGP key. I cannot access my private messages.
+<a>Sadly, we can't help you there either.
+
+<c>Accounts
+<q>How long does my session last?
+<a>Currently sessions timeout after 60 minutes of no activity, or until you press the LOGOUT button, in which case the session is destroyed immediately. If you let your session expire, after 60 minutes you will need to log back in again. We will allow this timeout setting to be customized in future releases.
+
+<c>Profile
+<q>How do I give people more information about me such as my outside email address, web page, interests, DMT (ALTA) claim number for making payments?
+<a>Go to your <a href="/user/settings/">User Settings</a> page and click on 'Profile' and fill it in.
+
+
+
+<c>Categories
+<q>What are Categories?
+<a>Categories are the highest level tag for marking content within DC. All content in News or the Forums belongs to at least one category. There are a handful of them.
+
+<c>Categories
+<q>What are Topics?
+<a>Topics are a more fine grain tag for organizing content, also belonging to a higher level category. There are many topics to choose from. 
+<c>Categories
+<q>I am still confused. What is the difference between a Category and a Topic?
+<a>Take a look at the Categories and Topics in the <a href="/forums/">Forums</a> or <a href="/news/">News</a> and the difference will become more clear. Both allow you to quickly identify if a 
+news article or forum post might be of interest to you.
+
+
+
+<c>News
+<q>What is the <a href="/news/">News</a>?
+<a>The News is the 'front page' of Distributed City. Users submit stories for the front page from their personal Weblogs (see: Weblogs) and also make comments about stories submitted.
+
+<c>News
+<q>Can I submit comments for a particular news story?
+<a>Yes, click on the 'Read More' link under the story lead in and enter your succinct and relevant comments on the breaking news,
+
+<c>News
+<q>How do I submit a story or an article to the main News page?
+<a>Use your own Weblog. See: Weblogs below. 
+
+
+
+<c>Forums
+<q>What are the <a href="/forums/">Forums</a>?
+<a>The forums are for ongoing in-depth discussions and commentary. Create a new post there, or add to an existing thread under one of the different Topics.
+
+<c>Forums
+<q>Are Private Forums available?
+<a>Closed group forums are currently on the drawing board. If you really want to see this feature, get the Distributed City source (see <a href="/services/">Other Services</a>), write it yourself and submit the module to us, or write us with encouraging words.
+
+
+
+<c>Private Messaging
+<q>What is <a href="/messaging/">Messaging</a>?
+<a>Private messaging allows you to send a private message instantly to another Distrubuted City user. Private Messages are encrypted by default using OpenPGP.
+<BR>
+Each Distributed City user has their own OpenPGP key which allows automatic and transparent OpenPGP encryption of messages within Distributed City.
+
+<c>Private Messaging
+<q>Can I use my OpenPGP key outside of Distributed City?
+<a>You can view your public key from the <a href="/user/settings/">User Settings</a> page by clicking on 'OpenPGP'. At the moment however, the only way to receive a message encrypted to it is from another user within Distributed City.
+
+
+
+<c>Chat
+<q>What is <a href="/chat/">Chat</a>?
+<a>Chat is for quick temporary conversations using iiP (the Invisible IRC Project). This is like the popular IRC chat client, except enhanced for privacy over an encrypted connection.
+
+
+
+<c>Weblogs
+<q>What is a <a href="/weblogs/">Weblog/BLOG</a>?
+<a>A Weblog is a web page made up of usually
+ short, frequently updated posts that are arranged chronologically --<BR>
+ like a what's new page or a journal. The content and purpose of<BR>
+ Weblog varies greatly -- from links and commentary about other web<BR>
+ sites, to news about a company/person/idea, to diaries, photos,<BR>
+ poetry, mini-essays, project updates, even fiction.
+<BR>
+ Many Weblogs are personal, "what's on my mind" type musings. Others are
+ collaborative efforts based on a specific topic or area of mutual
+ interest. Some Weblogs are for play. Some are for work. Some are both.
+ <BR>
+ When you create your Weblog here at Distributed City the content is entirely up to you.
+
+<c>Weblogs
+<q>What are Weblogs good for?
+<a>Weblogs are also excellent team/community/company/family communication
+ tools. They help small groups communicate in a way that is simple
+ and more easy to follow than email or discussion forums.<BR>
+ A Weblog can help keep everyone in the loop,
+ promote cohesiveness and group culture, and provide an informal
+ "voice" of a project or department to outsiders.
+<BR>
+Weblogs are also good for making submissions to the News frontpage. We want your content submissions!
+
+<c>Weblogs
+<q>Who can create a Weblog in Distributed City?
+<a>Each user has their own Weblog and can make entries at will.
+
+<c>Weblogs
+<q>Is my Weblog Private?
+<a>No, all Weblogs are viewable by other members of Distributed City.<BR>
+Closed group Weblogs are currently on the drawing board. If you really want to see this feature, get the Distributed City source (see <a href="/services/">Other Services</a>), write it yourself and submit the module to us, or write us with encouraging words.
+
+<c>Weblogs
+<q>Who can make an entry into my Weblog? Anyone?
+<a>No, just you. Only you can submit entries to your Weblog. Anyone may however, make a comment about your Weblog entry.
+
+<c>Weblogs
+<q>I really like x, y or z's Weblog. How can I draw people's attention to it?
+<a>On the user's Weblog page, click on the 'Recommend This Blog' button and they will get onto the 'Top Recommended' list from the main Weblogs page. 
+
+<c>Weblogs
+<q>How do I remove a user's Weblog from my Recommended List?
+<a>Go to your <a href="/user/settings/">User Settings</a> page and click on 'Recommendations'. Then click on the 'Remove' button next to their Nym.
+
+<c>Weblogs
+<q>What is the difference between my Personal Weblog and the main Distributed City News page?
+<a>Only who moderates the content. The Distributed City News and the Personal Weblogs use the same code.
+
+<c>Weblogs
+<q>How can I get some of my Weblog entries on to the Distributed City News or Sections?
+<a>When you add an entry to your Weblog, you may choose the type of Topic the entry belongs to, if you want to submit it as a 'Main Page Candidate' for the Distributed City News frontpage.
+
+<c>Weblogs
+<q>Can I edit my Weblog entry after I have submitted it?
+<a>At the present time no. We will allow "edits" to each entry in the future.
+
+<c>Weblogs
+<q>How do people find my Weblog?
+<a>Either the user clicks on your Nym in a post from the Distributed City News frontpage, comments or Forums or...
+<BR>
+The user clicks on your Nym in the <a href="/news/weblogs/">Weblogs list</a>.
+
+<c>Weblogs
+<q>Do you censor Weblogs?
+<a>No.
+
+<c>Weblogs
+<q>Who makes the decisions as to what articles/entries are accepted for the Distributed City News Front Page or Sections?
+<a>A group of moderators.
+
+<c>Weblogs
+<q>Who are the moderators?
+<a>Right now the moderators are the system administrators. We have plans for a community moderation system similar to Advogato, Slashdot, or Kuro5hin that will be integrated into our current system in the near future.
+
+
+
+<c>Users
+<q>How can I keep track of people I know and when they are online?
+<a>Find their Profile page and click on 'Add to your Buddy List'.
+
+<c>Users
+<q>How do I remove a user from my Buddy List?
+<a>Go to your <a href="/user/settings/">User Settings</a> page and click on 'Buddy List'. Then click on the 'Remove' button next to their Nym.
+
+
+
+<c>Advertising
+<q>Can I advertise on Distributed City?
+<a>Write and ask us mentioning what you have in mind.
+
+
+
+<c>Technology
+<q>What OS does Distributed City run on?
+<a>Linux.
+
+<c>Technology
+<q>What software does Distributed City use?
+<a>100% open source under the more liberal licenses.
+
+<c>Technology
+<q>You mean that I can download all of the source code for Distributed City and start up my own "XYZ City" with the same setup you have?
+<a>Yes. See '<a href="/services/">Other Services</a>'.
+
+<c>Technology
+<q>Where can I contribute to the development of Distributed City?
+<a>We are developing a SourceForge type setup. Details forthcoming.
+
+<c>Technology
+<q>I love Distributed City but I just must have feature x, y, or z...
+<a>If you really want to see a particular feature, get the Distributed City source (see <a href="/services/">Other Services</a>), write it yourself and submit the module to us, or write us with encouraging words.
+
+
+<c>Miscellaneous
+<q>Who owns Distributed City?
+<a>Distributed City is a wholly owned subsidiary of the Liquid Privacy Group. Find out more about them at http://www.liquidprivacy.net.
+However, you own the contents of your Weblog. Distributed City is intended to be built by its users for its users.

@@ -1,0 +1,25 @@
+<html><body>
+
+<h1>Sample6: Sections - nesting</h1>
+
+<p>
+There are {{count_flavor}} flavors.
+There are {{count_color}} colors.
+</p>
+
+<p>
+Suppose that each flavor comes in each of the colors. We can
+display this using nested sections.
+</p>
+
+
+<ol>
+
+{{section:flavors}}
+<li>flavor: "{{flavor}}"  colors: {{section:colors}}{{color}} {{/section:colors}} </li>
+{{/section:flavors}}
+
+</ol>
+
+
+</body></html>

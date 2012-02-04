@@ -1,0 +1,100 @@
+{{public_key_info_block}}
+
+{{section:additional_settings}}
+<table width="100%" cellpadding="0" cellspacing="3" border="0">
+      <tr>
+	<td>
+      {{section:change_passphrase_form}}
+    <form method="post" action="?mode=gpg&SID={{sid}}">
+      <table cellpadding="3" cellspacing="0" border="0" width="100%">
+	<tr>
+	  <td colspan="2" class="formHeader">
+		  Change Passphrase
+	  </td>
+	</tr>
+      {{section:passphrase_change_error autohide="yes"}}
+      <tr>
+	<td colspan="2" class="errorCell"><span class="errorText"><span class="errorLabel">ERROR:</span> {{passphrase_change_error}}</span></td>
+      </tr>
+      {{/section:passphrase_change_error}}
+      {{section:passphrase_change_ok autohide="yes"}}
+      <tr>
+	<td colspan="2" class="reportCell">{{passphrase_change_ok}}</td>
+      </tr>
+      {{/section:passphrase_change_ok}}
+      <tr>
+	<td align="right">
+	  <span class="formFieldLabel">Current&nbsp;Passphrase:</span>
+	  </td>
+	<td width="100%">
+	  <input type="password" name="passphrase_old"> 
+	  </td>
+	</tr>
+      <tr>
+	<td align="right">
+	  <span class="formFieldLabel">New&nbsp;Passphrase:</span>
+	  </td>
+	<td>
+	  <input type="password" name="passphrase_new"> 
+	  </td>
+	</tr>
+      <tr>
+	<td align="right">
+	  <span class="formFieldLabel">New&nbsp;Passphrase&nbsp;Confirm:</span>
+	  </td>
+	<td>
+	  <input type="password" name="passphrase_new_confirm"> 
+	  </td>
+	</tr>
+      <tr>
+	<td colspan="2" align="right" class="buttonRow">
+	  <input type="submit" name="change_passphrase" value="Change Passphrase"> 
+	  </td>
+	</tr>
+  </table>
+  </form>
+{{/section:change_passphrase_form}}
+  </td>
+    <td valign="top">
+      {{section:gpg_prefs_form}}
+    <form method="post" action="?mode=gpg&SID={{sid}}">
+	<table cellpadding="3" cellspacing="0" border="0" width="100%">
+	  <tr>
+	    <td colspan="2" class="formHeader">
+	      Private Message Preferences
+	    </td>
+	  </tr>
+	  <tr>
+	    <td align="right">
+	      <input type="checkbox" name="encrypt_body" value="yes" {{encrypt_body_checked_flag}}> 
+	    </td>
+	    <td>
+	      <span class="formFieldLabel">Always&nbsp;encrypt&nbsp;body</span>
+	    </td>
+	  </tr>
+	  <tr>
+	    <td align="right">
+	      <input type="checkbox" name="encrypt_subject" value="yes" {{encrypt_subject_checked_flag}}> 
+	    </td>
+	    <td>
+	      <span class="formFieldLabel">Always&nbsp;encrypt&nbsp;subject</span>
+	    </td>
+	  </tr>
+	  <tr>
+	  <td colspan="2">
+	  <span class="tipText">Body encryption must be enabled for subject encryption to be activated.</span>
+	  </td>
+	  </tr>
+	  <tr>
+	    <td colspan="2" align="right" class="buttonRow">
+	      <input type="submit" name="save_changes" value="Save Changes"> 
+	    </td>
+	  </tr>
+	</table>
+      </form>
+      {{/section:gpg_prefs_form}}
+    </td>
+  </tr>
+  </table>
+
+{{/section:additional_settings}}
