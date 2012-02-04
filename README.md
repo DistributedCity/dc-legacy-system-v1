@@ -1,6 +1,5 @@
-## Distributed City Legacy Website Forum/Blogging/Messaging System Codebase
-
-## DEPRECIATED - HISTORICAL ONLY
+## Distributed City 1.0 - Deprecitated Historical Only
+Legacy Website Forum/Blogging/Messaging System Codebase
 
 ### Legacy Sourceforge Project Page
 http://sourceforge.net/projects/distributedcity/
