@@ -11,3 +11,4 @@ http://distributedcity.sourceforge.net/
 ## TODO
 * Insert old About, project goals pages
 * Document features of the old system insert here
+* Insert old graphical diagrams
